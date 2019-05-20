@@ -1,0 +1,197 @@
+<div class="container">
+    <!-- Default form login -->
+    <form ngNativeValidate #f="ngForm" (ngSubmit)="agregarPc(f)" class="text-center border border-light p-5">
+        <h2 class="mb-4 text-center">Agregar computadora</h2>
+
+        <p class="h5 mb-2 text-left">Datos principales</p>
+        <!-- PRIMER FILA -->
+        <div class="row">
+            <!-- MARCA -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                <input required type="text" name="marca" [(ngModel)]="computadora.marca" class="form-control mb-4" placeholder="Marca" />
+            </div>
+
+            <!-- MODELO -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                <input required type="text" name="modelo" [(ngModel)]="computadora.modelo" class="form-control mb-4" placeholder="Modelo" />
+            </div>
+            <!-- PRECIO -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                <input required type="Number" name="precio" [(ngModel)]="computadora.precio" class="form-control mb-4" placeholder="Precio" />
+            </div>
+        </div>
+        <!-- SEGUNDA FILA -->
+        <div class="row">
+            <!-- CAPACIDAD DE ALMACENAMIENTO -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                <input required type="text" name="almacenamiento" [(ngModel)]="computadora.almacenamiento" class="form-control mb-4" placeholder="Capacidad De Almacenamiento" />
+            </div>
+            <!-- UNIDAD DE MEDIDA ALMACENAMIENTO -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                <select required name="tipoAlmacenamineto" [(ngModel)]="computadora.tipoAlmacenamineto" class="browser-default custom-select mb-4" placeholder="Tipo de almacenamiento">
+                    <option selected="true" disabled value="default" >Tipo de almacenamiento</option>
+                    <option value="GIGABYTE">GIGABYTE</option>
+                    <option value="TERABYTE">TERABYTE</option>
+                </select>
+            </div>
+            <!-- MEMORIA RAM -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                <input required type="text" name="ram" [(ngModel)]="computadora.ram" class="form-control mb-4" placeholder="Ram" />
+            </div>
+        </div>
+        <!-- TERCER FILA -->
+        <div class="row">
+            <!-- VELOCIDAD CPU -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                <input required type="text" name="velocidadCpu" [(ngModel)]="computadora.velocidadCpu" class="form-control mb-4" placeholder="Velocidad Del Cpu" />
+            </div>
+            <!-- MARCA CPU -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                <select required name="marcaCpu" [(ngModel)]="computadora.marcaCpu" class="browser-default custom-select mb-4" placeholder="Seleccionar una marca de CPU">
+          <option selected="true" disabled value="default" >Seleccionar una marca de CPU</option>
+          <option value="INTEL">Intel</option>
+          <option value="AMD">Amd</option>
+        </select>
+            </div>
+            <!-- LECTOR DE CD -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                <select required name="lectorCD" [(ngModel)]="computadora.lectorCD" class="browser-default custom-select mb-4">
+          <option selected="true"  value="default" disabled >¿Tiene lector de CD?</option>
+          <option value="true">Si</option>
+          <option value="false">No</option>
+        </select>
+            </div>
+        </div>
+        <!-- CUARTA FILA -->
+        <div class="row">
+            <!-- AQUI VA ENTRADAS DE VIDEO (CAMBIAR) -->
+            <!-- TARJETA INTEGRADA -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                <select required name="tarjetaIntegrada" [(ngModel)]="computadora.tajetaIntegrada" class="browser-default custom-select mb-4">
+          <option selected="true" disabled value="default">¿Tiene tarjeta integrada?</option>
+          <option value="true">Si</option>
+          <option value="false">No</option>
+        </select>
+            </div>
+            <!-- TARJETA DEDICADA -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                <select required name="tarjetaDedicada" [(ngModel)]="computadora.tajetaDedicada" class="browser-default custom-select mb-4">
+          <option selected="true" disabled value="default">¿Tiene tarjeta Dedicada?</option>
+          <option value="true">Si</option>
+          <option value="false">No</option>
+        </select>
+            </div>
+            <!-- MODELO TARJETA DE VIDEO -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                <input required type="text" name="modeloTarjetaVideo" [(ngModel)]="computadora.modeloTarjetaVideo" class="form-control mb-4" placeholder="Tarjeta integrada" />
+            </div>
+        </div>
+        <!-- QUINTA FILA -->
+        <div class="row">
+            <!-- RESOLUCION -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                <input required type="text" name="resolucion" [(ngModel)]="computadora.resolucion" class="form-control mb-4" placeholder="resolucion" />
+            </div>
+
+            <!-- ANCHO -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                <input required type="text" name="ancho" [(ngModel)]="computadora.ancho" class="form-control mb-4" placeholder="ancho" />
+            </div>
+            <!-- ALTO -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                <input required type="text" name="alto" [(ngModel)]="computadora.alto" class="form-control mb-4" placeholder="alto" />
+            </div>
+        </div>
+
+        <!-- SEXTA FILA -->
+        <div class="row">
+            <!-- PESO -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                <input required type="text" name="peso" [(ngModel)]="computadora.peso" class="form-control mb-4" placeholder="peso" />
+            </div>
+            <!-- USB2 -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                <input required type="text" name="usb2" [(ngModel)]="computadora.usb2" class="form-control mb-4" placeholder="usb2" />
+            </div>
+            <!-- USB3 -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                <input required type="text" name="usb3" [(ngModel)]="computadora.usb3" class="form-control mb-4" placeholder="usb3" />
+            </div>
+        </div>
+
+        <!-- SEPTIMA FILA -->
+        <div class="row">
+            <!-- ranura de expansion -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                <select required name="expansionRam" [(ngModel)]="computadora.expansionRam" class="browser-default custom-select mb-4">
+                  <option selected="true" disabled value="default">¿Tiene ranura de expansion?</option>
+                  <option value="true">Si</option>
+                  <option value="false">No</option>
+                </select>
+            </div>
+            <!-- tamaño de la pantalla -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                <!-- <div class="col-12 col-sm-12 col-md-4 col-lg-4"> -->
+                <input required type="text" name="tamanoPantalla" [(ngModel)]="computadora.tamanoPantalla" class="form-control mb-4" placeholder="tamanoPantalla" />
+                <!-- </div> -->
+            </div>
+            <!-- sistema operativo -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                <select required name="sistemaOperativo" [(ngModel)]="computadora.sistemaOperativo" class="browser-default custom-select mb-4">
+                <option selected="true" disabled value="default">Sistema operativo cargado</option>
+                <option value="WINDOWS10PRO">Windows 10 Pro</option>
+                <option value="WINDOWS10HOME">Windows 10 Home</option>
+                <option value="WINDOWS10SL">Windows 10 Single Lenguaje</option>
+                <option value="DISTLINUX">Distro Linux</option>
+                <option value="MACOSX">MACOSX</option>
+                <option value="MACOSC">MACOSC</option>
+              </select>
+            </div>
+        </div>
+        <!-- octava fila -->
+        <div class="row">
+            <!-- ranura de expansion -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                <input required type="text" name="color" [(ngModel)]="computadora.color" class="form-control mb-4" placeholder="Color" />
+            </div>
+            <!-- tamaño de la pantalla -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+            </div>
+            <!-- sistema operativo -->
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+
+            </div>
+        </div>
+
+        <div class="mb-4 bod border border-light p-5">
+            <input required type="text" name="video" class="form-control" placeholder="Salida de video" disabled />
+            <div class="text-justify centrar">
+
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="VGA" (change)="agregarVideo($event)" />
+                    <label class="custom-control-label" for="VGA">VGA</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="S-VIDEO" (change)="agregarVideo($event)" />
+                    <label class="custom-control-label" for="S-VIDEO">S-VIDEO</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="HDMI" (change)="agregarVideo($event)" />
+                    <label class="custom-control-label" for="HDMI">HDMI</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="MINI_VGA" (change)="agregarVideo($event)" />
+                    <label class="custom-control-label" for="MINI_VGA">MINI VGA</label>
+                </div>
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="DISPLAY_PORT" (change)="agregarVideo($event)" />
+                    <label class="custom-control-label" for="DISPLAY_PORT">DISPLAY PORT</label>
+                </div>
+            </div>
+        </div>
+        <!-- Sign in button -->
+        <button class="btn btn-info btn-block my-4" type="submit">Agregar</button>
+
+    </form>
+    <!-- Default form login -->
+</div>

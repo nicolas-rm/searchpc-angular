@@ -1,0 +1,289 @@
+<div class="container animated fadeIn" *ngIf="formulario">
+    <div class="row">
+        <div class="mt-12 col-sm-12 col-md-10 col-lg-7 centrar-div">
+
+
+            <mdb-card>
+                <!--Card image-->
+                <mdb-card-img src="assets/img/home.jpg" alt="Card image cap"></mdb-card-img>
+                <!--Card content-->
+                <mdb-card-body>
+
+                    <!--Title-->
+                    <mdb-card-title cascade="true" class="text-center">
+                        <h2>
+                            <strong>Bienvenido</strong>
+                        </h2>
+                        <h5 class="indigo-text">
+                            <strong>Tu computadora en un clic</strong>
+                        </h5>
+                    </mdb-card-title>
+
+                    <!--Text-->
+                    <mdb-card-text cascade="true" class="text-center">
+                        <button type="button" class="btn btn-secondary waves-effect waves-light" data-toggle="modal" data-target="#exampleModalLongSC">Empezar</button>
+                    </mdb-card-text>
+                    <!-- <i class="fas fa-chevron-right pl-1"></i> -->
+                    <!-- <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a> -->
+                </mdb-card-body>
+            </mdb-card>
+
+
+        </div>
+    </div>
+</div>
+
+<div class="container animated fadeIn" *ngIf="!formulario">
+    <div class="row">
+        <div class="mt-5 col-12 col-sm-12 col-md-4 col-lg-4" *ngFor="let computadora of computadoras;let i = index">
+            <mdb-card>
+                <!--Card image-->
+                <mdb-card-img [src]="computadora.img" alt="Card image cap"></mdb-card-img>
+                <!--Card content-->
+                <mdb-card-body>
+
+                    <!--Title-->
+                    <mdb-card-title cascade="true" class="text-center">
+                        <h2>
+                            <strong> {{i + 1}}) {{computadora.marca}} {{ computadora.modelo }}</strong>
+                        </h2>
+                        <h5 class="indigo-text">
+                            <strong>Propiedades:</strong>
+
+                        </h5>
+                    </mdb-card-title>
+
+                    <!--Text-->
+                    <mdb-card-text cascade="true" class="text-center">
+                        <!-- <button type="button" class="btn btn-secondary waves-effect waves-light" data-toggle="modal" data-target="#exampleModalLongSC">Empezar</button> -->
+                    </mdb-card-text>
+
+                    <!-- <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a> -->
+                </mdb-card-body>
+            </mdb-card>
+        </div>
+    </div>
+</div>
+
+
+<!-- SEGUNDA VENTANA -->
+<div class="modal fade" id="exampleModalLongSC" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitleSC" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitleSC">Encuesta</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+            </div>
+            <div class="modal-body">
+                <h2 class="text-center">Que eres ?</h2>
+                <div class="centrar">
+
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="Estudiante" (change)="agregarOcupacion($event)">
+                        <label class="custom-control-label" for="Estudiante">Estudiante</label>
+                    </div>
+
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="Diseñador" (change)="agregarOcupacion($event)">
+                        <label class="custom-control-label" for="Diseñador">Diseñador</label>
+                    </div>
+
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="Secretario" (change)="agregarOcupacion($event)">
+                        <label class="custom-control-label" for="Secretario">Secretario</label>
+                    </div>
+
+
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="Ingeniero" (change)="agregarOcupacion($event)">
+                        <label class="custom-control-label" for="Ingeniero">Ingeniero</label>
+                    </div>
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="Desarrollador" (change)="agregarOcupacion($event)">
+                        <label class="custom-control-label" for="Desarrollador">Desarrollador De Software</label>
+                    </div>
+                    <div class="custom-control custom-switch">
+                        <input type="checkbox" class="custom-control-input" id="Lincenciado" (change)="agregarOcupacion($event)">
+                        <label class="custom-control-label" for="Lincenciado">Lincenciado</label>
+                    </div>
+                </div>
+
+                <br>
+
+                <h2 class="text-align: justify">Cuantas horas le dara de uso</h2>
+                <div class="centrar">
+                    <div class="custom-control custom-switch">
+                        <input type="radio" class="custom-control-input" id="1_o_menos" name="groupOfDefaultRadios1" (change)="agregarHora($event)">
+                        <label class="custom-control-label" for="1_o_menos">1 o menos</label>
+                    </div>
+                    <div class="custom-control custom-switch">
+                        <input type="radio" class="custom-control-input" id="1-4" name="groupOfDefaultRadios1" (change)="agregarHora($event)">
+                        <label class="custom-control-label" for="1-4">1-4</label>
+                    </div>
+
+                    <!-- Group of default radios - option 2 -->
+                    <div class="custom-control custom-switch">
+                        <input type="radio" class="custom-control-input" id="4-8" name="groupOfDefaultRadios1" (change)="agregarHora($event)">
+                        <label class="custom-control-label" for="4-8">4-8</label>
+                    </div>
+
+                    <!-- Group of default radios - option 3 -->
+                    <div class="custom-control custom-switch">
+                        <input type="radio" class="custom-control-input" id="8-12" name="groupOfDefaultRadios1" (change)="agregarHora($event)">
+                        <label class="custom-control-label" for="8-12">8-12</label>
+                    </div>
+
+                    <div class="custom-control custom-switch">
+                        <input type="radio" class="custom-control-input" id="12_o_mas" name="groupOfDefaultRadios1" (change)="agregarHora($event)">
+                        <label class="custom-control-label" for="12_o_mas">12 o mas</label>
+                    </div>
+                </div>
+
+                <br>
+
+                <h2 class="text-center">Presupuesto</h2>
+                <div class="centrar">
+                    <input required type="number" required name="Presupuesto" [(ngModel)]="preferencias.presupuesto" class="form-control mb-4" placeholder="Presupuesto" />
+                </div>
+
+                <br>
+
+                <h2 class="text-center">Cuanto piensa usar su compu?</h2>
+                <div class="centrar">
+                    <div class="custom-control custom-switch">
+                        <input type="radio" required class="custom-control-input" id="Bajo" name="groupOfDefaultRadios2" (change)="agregarUso($event)">
+                        <label class="custom-control-label" for="Bajo">Muy poco</label>
+                    </div>
+                    <div class="custom-control custom-switch">
+                        <input type="radio" class="custom-control-input" id="Bajo-Medio" name="groupOfDefaultRadios2" (change)="agregarUso($event)">
+                        <label class="custom-control-label" for="Bajo-Medio">Poco</label>
+                    </div>
+
+                    <!-- Group of default radios - option 2 -->
+                    <div class="custom-control custom-switch">
+                        <input type="radio" class="custom-control-input" id="Medio" name="groupOfDefaultRadios2" (change)="agregarUso($event)">
+                        <label class="custom-control-label" for="Medio">Medio uso</label>
+                    </div>
+
+                    <!-- Group of default radios - option 3 -->
+                    <div class="custom-control custom-switch">
+                        <input type="radio" class="custom-control-input" id="Medio-Alto" name="groupOfDefaultRadios2" (change)="agregarUso($event)">
+                        <label class="custom-control-label" for="Medio-Alto">Bastante</label>
+                    </div>
+
+                    <div class="custom-control custom-switch">
+                        <input type="radio" class="custom-control-input" id="Alto" name="groupOfDefaultRadios2" (change)="agregarUso($event)">
+                        <label class="custom-control-label" for="Alto">Demasiado</label>
+                    </div>
+                </div>
+
+                <br>
+
+                <h2 class="text-center">Edad</h2>
+                <div class="centrar">
+                    <input required type="number" [(ngModel)]="preferencias.edad" name="Edad" class="form-control mb-4" placeholder="Edad" />
+                </div>
+
+                <br>
+
+                <h2 class="text-center">Que tipo de uso le da regularmente</h2>
+                <!-- <div class="centrar"> -->
+                <input required type="text" name="uso" class="form-control mb-4" placeholder="Uso" />
+                <!-- </div> -->
+
+                <h2 class="text-center">Marca de equipo preferida</h2>
+                <div class="centrar">
+
+                    <div class="custom-control custom-switch">
+                        <input type="radio" class="custom-control-input" name="groupOfDefaultRadios" id="HP" (change)="agregarMarcaPreferencia($event)">
+                        <label class="custom-control-label" for="HP">Hp</label>
+                    </div>
+
+                    <div class="custom-control custom-switch">
+                        <input type="radio" class="custom-control-input" name="groupOfDefaultRadios" id="DELL" (change)="agregarMarcaPreferencia($event)">
+                        <label class="custom-control-label" for="DELL">Dell</label>
+                    </div>
+
+                    <div class="custom-control custom-switch">
+                        <input type="radio" class="custom-control-input" name="groupOfDefaultRadios" id="TOSHIBA" (change)="agregarMarcaPreferencia($event)">
+                        <label class="custom-control-label" for="TOSHIBA">Toshiba</label>
+                    </div>
+
+                    <div class="custom-control custom-switch">
+                        <input type="radio" class="custom-control-input" name="groupOfDefaultRadios" id="ASUS" (change)="agregarMarcaPreferencia($event)">
+                        <label class="custom-control-label" for="ASUS">Asus</label>
+                    </div>
+                    <div class="custom-control custom-switch">
+                        <input type="radio" class="custom-control-input" name="groupOfDefaultRadios" id="LENOVO" (change)="agregarMarcaPreferencia($event)">
+                        <label class="custom-control-label" for="LENOVO">Lenovo</label>
+                    </div>
+                    <div class="custom-control custom-switch">
+                        <input type="radio" class="custom-control-input" name="groupOfDefaultRadios" id="SAMSUNG" (change)="agregarMarcaPreferencia($event)">
+                        <label class="custom-control-label" for="SAMSUNG">Samsung</label>
+                    </div>
+                    <div class="custom-control custom-switch">
+                        <input type="radio" class="custom-control-input" name="groupOfDefaultRadios" id="APPLE" (change)="agregarMarcaPreferencia($event)">
+                        <label class="custom-control-label" for="APPLE">Apple</label>
+                    </div>
+                    <div class="custom-control custom-switch">
+                        <input type="radio" class="custom-control-input" name="groupOfDefaultRadios" id="ACER" (change)="agregarMarcaPreferencia($event)">
+                        <label class="custom-control-label" for="ACER">Acer</label>
+                    </div>
+                    <div class="custom-control custom-switch">
+                        <input type="radio" class="custom-control-input" name="groupOfDefaultRadios" id="ALIENWARE" (change)="agregarMarcaPreferencia($event)">
+                        <label class="custom-control-label" for="ALIENWARE">Alienware</label>
+                    </div>
+                    <div class="custom-control custom-switch">
+                        <input type="radio" class="custom-control-input" name="groupOfDefaultRadios" id="GATEWAY" (change)="agregarMarcaPreferencia($event)">
+                        <label class="custom-control-label" for="GATEWAY">Gateway</label>
+                    </div>
+                    <div class="custom-control custom-switch">
+                        <input type="radio" class="custom-control-input" name="groupOfDefaultRadios" id="LANIX" (change)="agregarMarcaPreferencia($event)">
+                        <label class="custom-control-label" for="LANIX">Lanix</label>
+                    </div>
+                    <div class="custom-control custom-switch">
+                        <input type="radio" class="custom-control-input" name="groupOfDefaultRadios" id="OTRA" (change)="agregarMarcaPreferencia($event)">
+                        <label class="custom-control-label" for="OTRA">Otra</label>
+                    </div>
+                    <div class="custom-control custom-switch">
+                        <input type="radio" class="custom-control-input" name="groupOfDefaultRadios" id="NINGUNA" (change)="agregarMarcaPreferencia($event)">
+                        <label class="custom-control-label" for="NINGUNA">Ninguna</label>
+                    </div>
+                </div>
+
+                <br>
+
+                <h2 class="text-center">Seccion de caracteristicas</h2>
+
+                <br>
+
+                <h2 class="text-center">Color que le gustaria</h2>
+                <div class="centrar">
+                    <input required type="text" name="Color" class="form-control mb-4" placeholder="Color" [(ngModel)]="preferencias.color" />
+                </div>
+                <br>
+                <!-- <h2 class="text-center">Tamaño de la pantalla</h2>
+                <div class="centrar">
+                    <input required type="text" name="Tamaño" class="form-control mb-4" placeholder="Tamaño" />
+                </div> -->
+                <br>
+                <h2 class="text-center">Cantidad de almacenamiento</h2>
+                <div class="centrar">
+                    <input required type="text" name="almacenamiento" class="form-control mb-4" placeholder="Almacenamiento" [(ngModel)]="preferencias.almacenamiento" />
+                </div>
+                <br>
+                <!-- <h2 class="text-center">Tamaño del equipo</h2>
+                <div class="centrar">
+                    <input required type="number" name="tamanoequipo" class="form-control mb-4" placeholder="Tamaño Del equipo" [(ngModel)]="preferencias.ta"/>
+                </div> -->
+
+                <div class="modal-footer rem-dimensions">
+                    <button type="button" class="btn btn-secondary waves-effect waves-light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary waves-effect waves-light" data-dismiss="modal" (click)="sugerirPc()">Procesar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

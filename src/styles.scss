@@ -1,0 +1,212 @@
+// /* You can add global styles to this file, and also import other style files */
+// .dimensiones {
+//     /*ancho*/
+//     width: 700px;
+//     /*alto*/
+//     height: 600px;
+//     // margin: auto;
+//     margin-left: auto;
+//     margin-right: auto;
+//     align-content: center;
+// }
+// .size {
+//     // margin: auto;
+//     // width: auto;
+//     /*ancho*/
+//     width: auto;
+//     /*alto*/
+//     height: 550px;
+//     margin-left: auto;
+//     margin-right: auto;
+//     align-content: center;
+//     // display: flex;
+//     // justify-content: center;
+// }
+// .centrar-div {
+//     // background-color: yellow;
+//     /* IMPORTANTE */
+//     // padding: 1rem;
+//     margin-left: auto;
+//     margin-right: auto;
+//     margin: auto;
+//     // height: 700px;
+// }
+// .centrar {
+//     width: auto;
+//     // width: 120px;
+// }
+
+/* You can add global styles to this file, and also import other style files */
+
+.dimensiones {
+    /*ancho*/
+    width: auto;
+    /*alto*/
+    height: auto;
+    // margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    // align-content: center;
+}
+
+.size {
+    // margin: auto;
+    // width: auto;
+    /*ancho*/
+    width: auto;
+    /*alto*/
+    height: 550px;
+    // margin-left: auto;
+    // margin-right: auto;
+    align-content: center;
+    // padding: 1%;
+    // display: flex;
+    // justify-content: center;
+}
+
+.centrar-div {
+    // background-color: yellow;
+    /* IMPORTANTE */
+    padding: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    margin: auto;
+    // height: 1000px;
+}
+
+.padin {
+    padding: 0px;
+    // width: 120px;
+}
+
+.justyfy {
+    // background-color: #fafafa;
+    // border: 1px solid #ccc;
+    // padding: 0 1rem;
+    // margin: 0rem;
+    // width: 200px;
+    // // display: flex;
+    // margin-left: auto;
+    // margin-right: auto;
+    // align-content: center;
+    width: auto;
+    /*alto*/
+    height: auto;
+    // margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.centrar {
+    // background-color: yellow;
+    /* IMPORTANTE */
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.app-scroll::-webkit-scrollbar {
+    overflow: scroll;
+    // height: 270px;
+    /*background:gray;*/
+    // padding: 5px;
+    display: none;
+}
+
+// .app::-webkit-scrollbar {
+//     /* solo oculta su visualizacion */
+//     display: none;
+// }
+@keyframes check {
+    0% {
+        height: 0;
+        width: 0;
+    }
+    25% {
+        height: 0;
+        width: 10px;
+    }
+    50% {
+        height: 20px;
+        width: 10px;
+    }
+}
+
+.checkbox {
+    background-color: #fff;
+    display: inline-block;
+    height: 28px;
+    margin: 0 0.25em;
+    width: 28px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    // float: right;
+}
+
+.checkbox span {
+    display: block;
+    height: 28px;
+    position: relative;
+    width: 28px;
+    padding: 0;
+}
+
+.checkbox span:after {
+    -moz-transform: scaleX(-1) rotate(135deg);
+    -ms-transform: scaleX(-1) rotate(135deg);
+    -webkit-transform: scaleX(-1) rotate(135deg);
+    transform: scaleX(-1) rotate(135deg);
+    -moz-transform-origin: left top;
+    -ms-transform-origin: left top;
+    -webkit-transform-origin: left top;
+    transform-origin: left top;
+    border-right: 4px solid #fff;
+    border-top: 4px solid #fff;
+    content: "";
+    display: block;
+    height: 20px;
+    left: 3px;
+    position: absolute;
+    top: 15px;
+    width: 10px;
+}
+
+.checkbox span:hover:after {
+    border-color: #999;
+}
+
+.checkbox input {
+    display: none;
+}
+
+.checkbox input:checked+span:after {
+    -webkit-animation: check 0.8s;
+    -moz-animation: check 0.8s;
+    -o-animation: check 0.8s;
+    animation: check 0.8s;
+    border-color: #555;
+}
+
+.checkbox input:checked+.default:after {
+    border-color: #444;
+}
+
+.checkbox input:checked+.primary:after {
+    border-color: #2196f3;
+}
+
+.checkbox input:checked+.success:after {
+    border-color: #8bc34a;
+}
+
+.checkbox input:checked+.info:after {
+    border-color: #3de0f5;
+}
+
+.checkbox input:checked+.warning:after {
+    border-color: #ffc107;
+}
+
+.checkbox input:checked+.danger:after {
+    border-color: #f44336;
+}
