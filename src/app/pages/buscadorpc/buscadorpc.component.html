@@ -19,7 +19,8 @@
 
                     <!--Text-->
                     <mdb-card-text cascade="true" class="text-center">
-                        <button type="button" class="btn btn-secondary waves-effect waves-light" data-toggle="modal" data-target="#exampleModalLongSC">Empezar</button>
+                        <button type="button" class="btn btn-secondary waves-effect waves-light" data-toggle="modal"
+                            data-target="#exampleModalLongSC">Empezar</button>
                     </mdb-card-text>
                     <!-- <i class="fas fa-chevron-right pl-1"></i> -->
                     <!-- <a href="#" mdbBtn color="primary" mdbWavesEffect>Button</a> -->
@@ -65,45 +66,52 @@
 
 
 <!-- SEGUNDA VENTANA -->
-<div class="modal fade" id="exampleModalLongSC" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitleSC" aria-hidden="true">
+<div class="modal fade" id="exampleModalLongSC" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitleSC"
+    aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLongTitleSC">Encuesta</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">×</span>
-        </button>
+                    <span aria-hidden="true">×</span>
+                </button>
             </div>
             <div class="modal-body">
                 <h2 class="text-center">Que eres ?</h2>
                 <div class="centrar">
 
                     <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="Estudiante" (change)="agregarOcupacion($event)">
+                        <input type="checkbox" class="custom-control-input" id="Estudiante"
+                            (change)="agregarOcupacion($event)">
                         <label class="custom-control-label" for="Estudiante">Estudiante</label>
                     </div>
 
                     <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="Diseñador" (change)="agregarOcupacion($event)">
+                        <input type="checkbox" class="custom-control-input" id="Diseñador"
+                            (change)="agregarOcupacion($event)">
                         <label class="custom-control-label" for="Diseñador">Diseñador</label>
                     </div>
 
                     <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="Secretario" (change)="agregarOcupacion($event)">
+                        <input type="checkbox" class="custom-control-input" id="Secretario"
+                            (change)="agregarOcupacion($event)">
                         <label class="custom-control-label" for="Secretario">Secretario</label>
                     </div>
 
 
                     <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="Ingeniero" (change)="agregarOcupacion($event)">
+                        <input type="checkbox" class="custom-control-input" id="Ingeniero"
+                            (change)="agregarOcupacion($event)">
                         <label class="custom-control-label" for="Ingeniero">Ingeniero</label>
                     </div>
                     <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="Desarrollador" (change)="agregarOcupacion($event)">
+                        <input type="checkbox" class="custom-control-input" id="Desarrollador"
+                            (change)="agregarOcupacion($event)">
                         <label class="custom-control-label" for="Desarrollador">Desarrollador De Software</label>
                     </div>
                     <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="Lincenciado" (change)="agregarOcupacion($event)">
+                        <input type="checkbox" class="custom-control-input" id="Lincenciado"
+                            (change)="agregarOcupacion($event)">
                         <label class="custom-control-label" for="Lincenciado">Lincenciado</label>
                     </div>
                 </div>
@@ -113,28 +121,33 @@
                 <h2 class="text-align: justify">Cuantas horas le dara de uso</h2>
                 <div class="centrar">
                     <div class="custom-control custom-switch">
-                        <input type="radio" class="custom-control-input" id="1_o_menos" name="groupOfDefaultRadios1" (change)="agregarHora($event)">
+                        <input type="radio" class="custom-control-input" id="1_o_menos" name="groupOfDefaultRadios1"
+                            (change)="agregarHora($event)">
                         <label class="custom-control-label" for="1_o_menos">1 o menos</label>
                     </div>
                     <div class="custom-control custom-switch">
-                        <input type="radio" class="custom-control-input" id="1-4" name="groupOfDefaultRadios1" (change)="agregarHora($event)">
+                        <input type="radio" class="custom-control-input" id="1-4" name="groupOfDefaultRadios1"
+                            (change)="agregarHora($event)">
                         <label class="custom-control-label" for="1-4">1-4</label>
                     </div>
 
                     <!-- Group of default radios - option 2 -->
                     <div class="custom-control custom-switch">
-                        <input type="radio" class="custom-control-input" id="4-8" name="groupOfDefaultRadios1" (change)="agregarHora($event)">
+                        <input type="radio" class="custom-control-input" id="4-8" name="groupOfDefaultRadios1"
+                            (change)="agregarHora($event)">
                         <label class="custom-control-label" for="4-8">4-8</label>
                     </div>
 
                     <!-- Group of default radios - option 3 -->
                     <div class="custom-control custom-switch">
-                        <input type="radio" class="custom-control-input" id="8-12" name="groupOfDefaultRadios1" (change)="agregarHora($event)">
+                        <input type="radio" class="custom-control-input" id="8-12" name="groupOfDefaultRadios1"
+                            (change)="agregarHora($event)">
                         <label class="custom-control-label" for="8-12">8-12</label>
                     </div>
 
                     <div class="custom-control custom-switch">
-                        <input type="radio" class="custom-control-input" id="12_o_mas" name="groupOfDefaultRadios1" (change)="agregarHora($event)">
+                        <input type="radio" class="custom-control-input" id="12_o_mas" name="groupOfDefaultRadios1"
+                            (change)="agregarHora($event)">
                         <label class="custom-control-label" for="12_o_mas">12 o mas</label>
                     </div>
                 </div>
@@ -143,7 +156,8 @@
 
                 <h2 class="text-center">Presupuesto</h2>
                 <div class="centrar">
-                    <input required type="number" required name="Presupuesto" [(ngModel)]="preferencias.presupuesto" class="form-control mb-4" placeholder="Presupuesto" />
+                    <input required type="number" required name="Presupuesto" [(ngModel)]="preferencias.presupuesto"
+                        class="form-control mb-4" placeholder="Presupuesto" />
                 </div>
 
                 <br>
@@ -151,28 +165,33 @@
                 <h2 class="text-center">Cuanto piensa usar su compu?</h2>
                 <div class="centrar">
                     <div class="custom-control custom-switch">
-                        <input type="radio" required class="custom-control-input" id="Bajo" name="groupOfDefaultRadios2" (change)="agregarUso($event)">
+                        <input type="radio" required class="custom-control-input" id="Bajo" name="groupOfDefaultRadios2"
+                            (change)="agregarUso($event)">
                         <label class="custom-control-label" for="Bajo">Muy poco</label>
                     </div>
                     <div class="custom-control custom-switch">
-                        <input type="radio" class="custom-control-input" id="Bajo-Medio" name="groupOfDefaultRadios2" (change)="agregarUso($event)">
+                        <input type="radio" class="custom-control-input" id="Bajo-Medio" name="groupOfDefaultRadios2"
+                            (change)="agregarUso($event)">
                         <label class="custom-control-label" for="Bajo-Medio">Poco</label>
                     </div>
 
                     <!-- Group of default radios - option 2 -->
                     <div class="custom-control custom-switch">
-                        <input type="radio" class="custom-control-input" id="Medio" name="groupOfDefaultRadios2" (change)="agregarUso($event)">
+                        <input type="radio" class="custom-control-input" id="Medio" name="groupOfDefaultRadios2"
+                            (change)="agregarUso($event)">
                         <label class="custom-control-label" for="Medio">Medio uso</label>
                     </div>
 
                     <!-- Group of default radios - option 3 -->
                     <div class="custom-control custom-switch">
-                        <input type="radio" class="custom-control-input" id="Medio-Alto" name="groupOfDefaultRadios2" (change)="agregarUso($event)">
+                        <input type="radio" class="custom-control-input" id="Medio-Alto" name="groupOfDefaultRadios2"
+                            (change)="agregarUso($event)">
                         <label class="custom-control-label" for="Medio-Alto">Bastante</label>
                     </div>
 
                     <div class="custom-control custom-switch">
-                        <input type="radio" class="custom-control-input" id="Alto" name="groupOfDefaultRadios2" (change)="agregarUso($event)">
+                        <input type="radio" class="custom-control-input" id="Alto" name="groupOfDefaultRadios2"
+                            (change)="agregarUso($event)">
                         <label class="custom-control-label" for="Alto">Demasiado</label>
                     </div>
                 </div>
@@ -181,7 +200,8 @@
 
                 <h2 class="text-center">Edad</h2>
                 <div class="centrar">
-                    <input required type="number" [(ngModel)]="preferencias.edad" name="Edad" class="form-control mb-4" placeholder="Edad" />
+                    <input required type="number" [(ngModel)]="preferencias.edad" name="Edad" class="form-control mb-4"
+                        placeholder="Edad" />
                 </div>
 
                 <br>
@@ -195,58 +215,71 @@
                 <div class="centrar">
 
                     <div class="custom-control custom-switch">
-                        <input type="radio" class="custom-control-input" name="groupOfDefaultRadios" id="HP" (change)="agregarMarcaPreferencia($event)">
+                        <input type="checkbox" class="custom-control-input" id="HP"
+                            (change)="agregarMarcaPreferencia($event)">
                         <label class="custom-control-label" for="HP">Hp</label>
                     </div>
 
                     <div class="custom-control custom-switch">
-                        <input type="radio" class="custom-control-input" name="groupOfDefaultRadios" id="DELL" (change)="agregarMarcaPreferencia($event)">
+                        <input type="checkbox" class="custom-control-input" id="DELL"
+                            (change)="agregarMarcaPreferencia($event)">
                         <label class="custom-control-label" for="DELL">Dell</label>
                     </div>
 
                     <div class="custom-control custom-switch">
-                        <input type="radio" class="custom-control-input" name="groupOfDefaultRadios" id="TOSHIBA" (change)="agregarMarcaPreferencia($event)">
+                        <input type="checkbox" class="custom-control-input" id="TOSHIBA"
+                            (change)="agregarMarcaPreferencia($event)">
                         <label class="custom-control-label" for="TOSHIBA">Toshiba</label>
                     </div>
 
                     <div class="custom-control custom-switch">
-                        <input type="radio" class="custom-control-input" name="groupOfDefaultRadios" id="ASUS" (change)="agregarMarcaPreferencia($event)">
+                        <input type="checkbox" class="custom-control-input" id="ASUS"
+                            (change)="agregarMarcaPreferencia($event)">
                         <label class="custom-control-label" for="ASUS">Asus</label>
                     </div>
                     <div class="custom-control custom-switch">
-                        <input type="radio" class="custom-control-input" name="groupOfDefaultRadios" id="LENOVO" (change)="agregarMarcaPreferencia($event)">
+                        <input type="checkbox" class="custom-control-input" id="LENOVO"
+                            (change)="agregarMarcaPreferencia($event)">
                         <label class="custom-control-label" for="LENOVO">Lenovo</label>
                     </div>
                     <div class="custom-control custom-switch">
-                        <input type="radio" class="custom-control-input" name="groupOfDefaultRadios" id="SAMSUNG" (change)="agregarMarcaPreferencia($event)">
+                        <input type="checkbox" class="custom-control-input" id="SAMSUNG"
+                            (change)="agregarMarcaPreferencia($event)">
                         <label class="custom-control-label" for="SAMSUNG">Samsung</label>
                     </div>
                     <div class="custom-control custom-switch">
-                        <input type="radio" class="custom-control-input" name="groupOfDefaultRadios" id="APPLE" (change)="agregarMarcaPreferencia($event)">
+                        <input type="checkbox" class="custom-control-input" id="APPLE"
+                            (change)="agregarMarcaPreferencia($event)">
                         <label class="custom-control-label" for="APPLE">Apple</label>
                     </div>
                     <div class="custom-control custom-switch">
-                        <input type="radio" class="custom-control-input" name="groupOfDefaultRadios" id="ACER" (change)="agregarMarcaPreferencia($event)">
+                        <input type="checkbox" class="custom-control-input" id="ACER"
+                            (change)="agregarMarcaPreferencia($event)">
                         <label class="custom-control-label" for="ACER">Acer</label>
                     </div>
                     <div class="custom-control custom-switch">
-                        <input type="radio" class="custom-control-input" name="groupOfDefaultRadios" id="ALIENWARE" (change)="agregarMarcaPreferencia($event)">
+                        <input type="checkbox" class="custom-control-input" id="ALIENWARE"
+                            (change)="agregarMarcaPreferencia($event)">
                         <label class="custom-control-label" for="ALIENWARE">Alienware</label>
                     </div>
                     <div class="custom-control custom-switch">
-                        <input type="radio" class="custom-control-input" name="groupOfDefaultRadios" id="GATEWAY" (change)="agregarMarcaPreferencia($event)">
+                        <input type="checkbox" class="custom-control-input" id="GATEWAY"
+                            (change)="agregarMarcaPreferencia($event)">
                         <label class="custom-control-label" for="GATEWAY">Gateway</label>
                     </div>
                     <div class="custom-control custom-switch">
-                        <input type="radio" class="custom-control-input" name="groupOfDefaultRadios" id="LANIX" (change)="agregarMarcaPreferencia($event)">
+                        <input type="checkbox" class="custom-control-input" id="LANIX"
+                            (change)="agregarMarcaPreferencia($event)">
                         <label class="custom-control-label" for="LANIX">Lanix</label>
                     </div>
                     <div class="custom-control custom-switch">
-                        <input type="radio" class="custom-control-input" name="groupOfDefaultRadios" id="OTRA" (change)="agregarMarcaPreferencia($event)">
+                        <input type="checkbox" class="custom-control-input" id="OTRA"
+                            (change)="agregarMarcaPreferencia($event)">
                         <label class="custom-control-label" for="OTRA">Otra</label>
                     </div>
                     <div class="custom-control custom-switch">
-                        <input type="radio" class="custom-control-input" name="groupOfDefaultRadios" id="NINGUNA" (change)="agregarMarcaPreferencia($event)">
+                        <input type="checkbox" class="custom-control-input" id="NINGUNA"
+                            (change)="agregarMarcaPreferencia($event)">
                         <label class="custom-control-label" for="NINGUNA">Ninguna</label>
                     </div>
                 </div>
@@ -259,7 +292,8 @@
 
                 <h2 class="text-center">Color que le gustaria</h2>
                 <div class="centrar">
-                    <input required type="text" name="Color" class="form-control mb-4" placeholder="Color" [(ngModel)]="preferencias.color" />
+                    <input required type="text" name="Color" class="form-control mb-4" placeholder="Color"
+                        [(ngModel)]="preferencias.color" />
                 </div>
                 <br>
                 <!-- <h2 class="text-center">Tamaño de la pantalla</h2>
@@ -269,7 +303,8 @@
                 <br>
                 <h2 class="text-center">Cantidad de almacenamiento</h2>
                 <div class="centrar">
-                    <input required type="text" name="almacenamiento" class="form-control mb-4" placeholder="Almacenamiento" [(ngModel)]="preferencias.almacenamiento" />
+                    <input required type="text" name="almacenamiento" class="form-control mb-4"
+                        placeholder="Almacenamiento" [(ngModel)]="preferencias.almacenamiento" />
                 </div>
                 <br>
                 <!-- <h2 class="text-center">Tamaño del equipo</h2>
@@ -278,57 +313,12 @@
                 </div> -->
 
                 <div class="modal-footer rem-dimensions">
-                    <button type="button" class="btn btn-secondary waves-effect waves-light" data-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-primary waves-effect waves-light" data-dismiss="modal" (click)="sugerirPc()">Procesar</button>
+                    <button type="button" class="btn btn-secondary waves-effect waves-light"
+                        data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary waves-effect waves-light" data-dismiss="modal"
+                        (click)="sugerirPc()">Procesar</button>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-
-<div class="container animated fadeIn size">
-    <div class="row">
-        <div>
-            <!--Carousel Wrapper-->
-            <div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
-                <!--Indicators-->
-                <ol class="carousel-indicators">
-                    <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-example-1z" data-slide-to="1"></li>
-                    <li data-target="#carousel-example-1z" data-slide-to="2"></li>
-                </ol>
-                <!--/.Indicators-->
-                <!--Slides-->
-                <div class="carousel-inner" role="listbox">
-                    <!--First slide-->
-                    <div class="carousel-item active">
-                        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(130).jpg" alt="First slide">
-                    </div>
-                    <!--/First slide-->
-                    <!--Second slide-->
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(129).jpg" alt="Second slide">
-                    </div>
-                    <!--/Second slide-->
-                    <!--Third slide-->
-                    <div class="carousel-item">
-                        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg" alt="Third slide">
-                    </div>
-                    <!--/Third slide-->
-                </div>
-                <!--/.Slides-->
-                <!--Controls-->
-                <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-                <!--/.Controls-->
-            </div>
-            <!--/.Carousel Wrapper-->
         </div>
     </div>
 </div>

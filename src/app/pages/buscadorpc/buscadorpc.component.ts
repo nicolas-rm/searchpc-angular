@@ -24,7 +24,7 @@ export class BuscadorpcComponent implements OnInit {
     presupuesto: 0,
     edad: 0,
     nivelUso: '',
-    marcaPreferencia: '',
+    marcaPreferencia: [],
     color: '',
     almacenamiento: ''
   }
@@ -85,13 +85,28 @@ export class BuscadorpcComponent implements OnInit {
 
   agregarMarcaPreferencia(event) {
     
-    
-    if (event.target.checked) {
-      this.preferencias.marcaPreferencia = event.target.id.toString();
-    }
+    // este es para uno solo
+    // if (event.target.checked) {
+    //   this.preferencias.marcaPreferencia = event.target.id.toString();
+    // }
 
+    //////////////
+    // este es para varios
+    console.log(event);
+    if (event.target.checked) {
+      var separacion = ""+event.target.id.toString()+"";
+      console.log(separacion);
+      this.preferencias.marcaPreferencia.push(separacion);
+    } else {
+      for (let i = 0; i < this.preferencias.marcaPreferencia.length; i++) {
+        if (this.preferencias.marcaPreferencia[i] === event.target.id.toString()) {
+          this.preferencias.marcaPreferencia.splice(i, 1);
+        }
+      }
+
+    }
     // this.preferencias.marcaPreferencia = this.arregloMarcaPreferencia;
-    // console.log(this.preferencias.marcaPreferencia);
+    console.log(this.preferencias.marcaPreferencia);
     // console.log(this.preferencias.color);
   }
 
