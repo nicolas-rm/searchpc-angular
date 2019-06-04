@@ -19,14 +19,14 @@ export class BuscadorpcComponent implements OnInit {
   arregloMarcaPreferencia: any = [];
   desde = 0;
   preferencias = {
-    ocupacion: '',
+    ocupacion: ''.toUpperCase(),
     horas: 0,
     presupuesto: 0,
     edad: 0,
-    nivelUso: '',
+    nivelUso: ''.toUpperCase(),
     marcaPreferencia: [],
-    color: '',
-    almacenamiento: ''
+    color: ''.toUpperCase(),
+    almacenamiento: ''.toUpperCase()
   }
 
   /** */
@@ -66,7 +66,7 @@ export class BuscadorpcComponent implements OnInit {
     if (event.target.checked) {
       var separacion = ""+event.target.id.toString()+"";
       console.log(separacion);
-      this.arregloOcupacion.push(separacion);
+      this.arregloOcupacion.push(separacion.toUpperCase());
     } else {
       for (let i = 0; i < this.arregloOcupacion.length; i++) {
         if (this.arregloOcupacion[i] === event.target.id.toString()) {
