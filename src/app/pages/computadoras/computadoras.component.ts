@@ -1,12 +1,12 @@
-import { Component, OnInit } from "@angular/core";
-import { NgForm } from "@angular/forms";
-import swal from "sweetalert2";
-import { ComputadoraService } from "../../services/computadora.service";
+import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import swal from 'sweetalert2';
+import { ComputadoraService } from '../../services/computadora.service';
 // import { post } from 'selenium-webdriver/http';
 
 @Component({
-  selector: "app-computadoras",
-  templateUrl: "./computadoras.component.html",
+  selector: 'app-computadoras',
+  templateUrl: './computadoras.component.html',
   styles: []
 })
 export class ComputadorasComponent implements OnInit {
@@ -15,30 +15,30 @@ export class ComputadorasComponent implements OnInit {
   arregloVideo: any = [];
   desde = 0;
   computadora = {
-    marca: "".toUpperCase(),
-    modelo: "".toUpperCase(),
+    marca: ''.toUpperCase(),
+    modelo: ''.toUpperCase(),
     precio: 0.0,
-    color: "".toUpperCase(),
-    almacenamiento: "".toUpperCase(),
-    tipoAlmacenamineto: "default",
-    ram: "".toUpperCase(),
-    velocidadCpu: "".toUpperCase(),
-    marcaCpu: "default",
-    lectorCD: "default" /* aqui */,
+    color: ''.toUpperCase(),
+    almacenamiento: ''.toUpperCase(),
+    tipoAlmacenamineto: 'default',
+    ram: ''.toUpperCase(),
+    velocidadCpu: ''.toUpperCase(),
+    marcaCpu: 'default',
+    lectorCD: 'default' /* aqui */,
     video: [] /* aqui */,
-    tajetaIntegrada: "default" /* aqui */,
-    tajetaDedicada: "default" /* aqui */,
-    modeloTarjetaVideo: "".toUpperCase(),
-    tamanoPantalla: "".toUpperCase(),
-    resolucion: "".toUpperCase(),
-    ancho: "".toUpperCase(),
-    alto: "".toUpperCase(),
-    peso: "".toUpperCase(),
-    sistemaOperativo: "default",
-    usb2: "".toUpperCase(),
-    usb3: "".toUpperCase(),
-    expansionRam: "default" /* aqui */,
-    img: ""
+    tajetaIntegrada: 'default' /* aqui */,
+    tajetaDedicada: 'default' /* aqui */,
+    modeloTarjetaVideo: ''.toUpperCase(),
+    tamanoPantalla: ''.toUpperCase(),
+    resolucion: ''.toUpperCase(),
+    ancho: ''.toUpperCase(),
+    alto: ''.toUpperCase(),
+    peso: ''.toUpperCase(),
+    sistemaOperativo: 'default',
+    usb2: ''.toUpperCase(),
+    usb3: ''.toUpperCase(),
+    expansionRam: 'default' /* aqui */,
+    img: ''
   };
 
   // tslint:disable-next-line: variable-name
@@ -50,7 +50,8 @@ export class ComputadorasComponent implements OnInit {
 
   agregarVideo(event) {
     if (event.target.checked) {
-      var separacion = "" + event.target.id.toString() + "";
+// tslint:disable-next-line: prefer-const
+      let separacion = '' + event.target.id.toString() + '';
       console.log(separacion);
       this.arregloVideo.push(separacion);
     } else {
@@ -79,7 +80,7 @@ export class ComputadorasComponent implements OnInit {
     // tslint:disable-next-line: jsdoc-format
     /**manda a llamar al metodo para guardar la computadora */
     this._computadoraService.registrarComputadora(this.computadora).subscribe((resp: any) => {
-      console.log("se guardo exitosamente: computadoras.components.ts");
+      console.log('se guardo exitosamente: computadoras.components.ts');
     });
     /*mensja o notificacion estilo retro */
     /* swal.fire({

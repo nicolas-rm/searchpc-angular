@@ -27,7 +27,7 @@ export class BuscadorpcComponent implements OnInit {
     marcaPreferencia: [],
     color: ''.toUpperCase(),
     almacenamiento: ''.toUpperCase()
-  }
+  };
 
   /** */
   // tslint:disable-next-line: jsdoc-format
@@ -46,7 +46,7 @@ export class BuscadorpcComponent implements OnInit {
     /**referencia al donde mandare los parametros */
     /* this._computadoraService.cargarConAlgoritmo() */
 
-    this._computadoraService.cargarConAlgoritmo(this.preferencias,this.desde).subscribe((resp: any) => {
+    this._computadoraService.cargarConAlgoritmo(this.preferencias, this.desde).subscribe((resp: any) => {
       this.computadoras = resp;
       console.log(this.computadoras);
     });
@@ -54,7 +54,7 @@ export class BuscadorpcComponent implements OnInit {
     console.log(this.preferencias);
     if (this.formulario) {
       this.formulario = false;
-    } else{
+    } else {
       this.formulario = true;
     }
 
@@ -64,7 +64,8 @@ export class BuscadorpcComponent implements OnInit {
 
     console.log(event);
     if (event.target.checked) {
-      var separacion = ""+event.target.id.toString()+"";
+      // tslint:disable-next-line: prefer-const
+      let separacion = '' + event.target.id.toString() + '';
       console.log(separacion);
       this.arregloOcupacion.push(separacion.toUpperCase());
     } else {
@@ -84,7 +85,7 @@ export class BuscadorpcComponent implements OnInit {
   }
 
   agregarMarcaPreferencia(event) {
-    
+
     // este es para uno solo
     // if (event.target.checked) {
     //   this.preferencias.marcaPreferencia = event.target.id.toString();
@@ -94,7 +95,7 @@ export class BuscadorpcComponent implements OnInit {
     // este es para varios
     console.log(event);
     if (event.target.checked) {
-      var separacion = ""+event.target.id.toString()+"";
+      const separacion = '' + event.target.id.toString() + '';
       console.log(separacion);
       this.preferencias.marcaPreferencia.push(separacion);
     } else {
@@ -125,7 +126,7 @@ export class BuscadorpcComponent implements OnInit {
     // console.log(this.preferencias.nivelUso);
   }
 
-  
+
   onclick() {
     this.clickMessage = 'You are my hero!';
     // console.log(this.clickMessage);
