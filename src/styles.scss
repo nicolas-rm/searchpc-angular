@@ -66,21 +66,35 @@
     display: none;
 }
 
-@keyframes check {
-    0% {
-        height: 0;
-        width: 0;
-    }
-    25% {
-        height: 0;
-        width: 10px;
-    }
-    50% {
-        height: 20px;
-        width: 10px;
-    }
+body {
+    background: #eee;
 }
 
-.text-small {
-    font-size: 0.75rem;
+span {
+    font-size: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #0062cc;
+    border-bottom: 2px solid #0062cc;
+}
+
+.box {
+    padding: 60px 0px;
+}
+
+.box-part {
+    background: #FFF;
+    border-radius: 0;
+    padding: 60px 10px;
+    margin: 30px 0px;
+}
+
+.text {
+    margin: 20px 0px;
+}
+
+.fa {
+    color: #4183D7;
 }
