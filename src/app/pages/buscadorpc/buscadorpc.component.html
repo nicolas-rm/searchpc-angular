@@ -265,6 +265,7 @@
                 <h2 class="text-center">Color que le gustaria</h2>
                 <div class="centrar">
                     <input required type="text" name="Color" class="form-control mb-4" placeholder="Color" [(ngModel)]="preferencias.color" />
+                    <p> Marca: {{ preferencias.color }} <strong>:v</strong> </p>
                 </div>
                 <br>
                 <!-- <h2 class="text-center">Tamaño de la pantalla</h2>
@@ -277,6 +278,11 @@
                     <input required type="text" name="almacenamiento" class="form-control mb-4" placeholder="Almacenamiento" [(ngModel)]="preferencias.almacenamiento" />
                 </div>
                 <br>
+                <!-- codigo para escribir en un lado y pasarlo en el otro automaticamente
+                <input type="text" name="color" [(ngModel)]="computadora.color" class="form-control mb-4" placeholder="color">
+            <p> Marca: {{ computadora.color }} <strong>:v</strong> </p> -->
+
+
                 <!-- <h2 class="text-center">Tamaño del equipo</h2>
                 <div class="centrar">
                     <input required type="number" name="tamanoequipo" class="form-control mb-4" placeholder="Tamaño Del equipo" [(ngModel)]="preferencias.ta"/>
