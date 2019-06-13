@@ -10,7 +10,7 @@ import { ComputadorasComponent } from './pages/computadoras/computadoras.compone
 // HttpClientModule
 import { HttpClientModule } from '@angular/common/http';
 
-//Routing 
+//Routing
 import { RouterModule, Routes } from '@angular/router';
 import { BuscadorpcComponent } from './pages/buscadorpc/buscadorpc.component';
 import { ResultadosSugerenciaComponent } from './pages/resultados-sugerencia/resultados-sugerencia.component';

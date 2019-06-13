@@ -292,38 +292,51 @@
 </div>
 
 <!-- VENTANA DE CARACTERISTICAS DEL ORDENADOR PORTATIL -->
-<div class="modal fade" id="caracteristicas" tabindex="-1" role="dialog" aria-labelledby="caracteristicasTittle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-scrollable" role="document" *ngFor="let computador of computadoras;let o = index">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="caracteristicasTittle">Caracteristicas Del Ordenador Portatil</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">×</span>
-                  </button>
-            </div>
-            <div class="modal-body">
-                <h5 class="left"> Marca: {{ computador.marca }}</h5>
-                <h5 class="left"> Modelo: {{ computador.modelo }}</h5>
-                <h5 class="left"> <strong>Almacenamiento <br>({{computador.tipoAlmacenamineto}}):</strong> {{ computador.almacenamiento }}</h5>
-                <h5 class="left"> Ram: {{ computador.ram }}</h5>
-                <h5 class="left"> Velocidad CPU: {{ computador.velocidadCpu }}</h5>
-                <h5 class="left" *ngIf="computador.lectorCD"> Lector CD: SI</h5>
-                <h5 class="left"> Entradas De Video: {{ computador.video }}</h5>
-                <!-- <h5 class="left"> Tarjeta Integrada: {{ computador.tajetaIntegrada }}</h5> -->
-                <h5 class="left" *ngIf="computador.tajetaDedicada"> Tarjeta Dedicada: {{ computador.modeloTarjetaVideo }}</h5>
-                <h5 class="left"> <strong>Tamaño De La Pantalla <br> (Inches - Pulgadas):</strong> {{ computador.tamanoPantalla }}</h5>
-                <h5 class="left"> Resolucion: {{ computador.resolucion }}</h5>
-                <h5 class="left"> Ancho: {{ computador.ancho }}</h5>
-                <h5 class="left"> Alto: {{ computador.alto }}</h5>
-                <h5 class="left"> Peso: {{ computador.peso }}</h5>
-                <h5 class="left"> Sistema Operativo: {{ computador.sistemaOperativo }}</h5>
-                <h5 class="left"> Usb 2.0: {{ computador.usb2 }}</h5>
-                <h5 class="left"> Usb 3.0: {{ computador.usb3 }}</h5>
-                <div class="modal-footer rem-dimensions">
-                    <button type="button" class="btn btn-secondary waves-effect waves-light" data-dismiss="modal">Cancelar</button>
-                    <!-- <button type="button" class="btn btn-primary waves-effect waves-light" data-dismiss="modal" (click)="sugerirPc()">Procesar</button> -->
+<!-- <ng-container > -->
+<!-- <div class="row"> -->
+
+<div class="container">
+    <div class="row">
+        <div class="mt-5 col-12 col-sm-12 col-md-4 col-lg-4">
+            <div class="modal fade" id="caracteristicas" tabindex="-1" role="dialog" aria-labelledby="caracteristicasTittle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-scrollable" role="document" *ngFor="let computador of computadoras;let o = index">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="caracteristicasTittle">Caracteristicas Del Ordenador Portatil</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">×</span>
+                      </button>
+                        </div>
+                        <div class="modal-body">
+                            <h5 class="left"> Marca: {{ computador.marca }}</h5>
+
+                            <h5 class="left"> Modelo: {{ computador.modelo }}</h5>
+                            <h5 class="left"> <strong>Almacenamiento <br>({{computador.tipoAlmacenamineto}}):</strong> {{ computador.almacenamiento }}</h5>
+                            <h5 class="left"> Ram: {{ computador.ram }}</h5>
+                            <h5 class="left"> Velocidad CPU: {{ computador.velocidadCpu }}</h5>
+                            <h5 class="left" *ngIf="computador.lectorCD"> Lector CD: SI</h5>
+                            <h5 class="left"> Entradas De Video: {{ computador.video }}</h5>
+                            <!-- <h5 class="left"> Tarjeta Integrada: {{ computador.tajetaIntegrada }}</h5> -->
+                            <!--  <h5 class="left" *ngIf="computador.tajetaDedicada"> Tarjeta Dedicada: {{ computador.modeloTarjetaVideo }}</h5>
+                    <h5 class="left"> <strong>Tamaño De La Pantalla <br> (Inches - Pulgadas):</strong> {{ computador.tamanoPantalla }}</h5>
+                    <h5 class="left"> Resolucion: {{ computador.resolucion }}</h5>
+                    <h5 class="left"> Ancho: {{ computador.ancho }}</h5>
+                    <h5 class="left"> Alto: {{ computador.alto }}</h5>
+                    <h5 class="left"> Peso: {{ computador.peso }}</h5>
+                    <h5 class="left"> Sistema Operativo: {{ computador.sistemaOperativo }}</h5>
+                    <h5 class="left"> Usb 2.0: {{ computador.usb2 }}</h5>
+                    <h5 class="left"> Usb 3.0: {{ computador.usb3 }}</h5> -->
+                            <div class="modal-footer rem-dimensions">
+                                <button type="button" class="btn btn-secondary waves-effect waves-light" data-dismiss="modal">Cancelar</button>
+                                <!-- <button type="button" class="btn btn-primary waves-effect waves-light" data-dismiss="modal" (click)="sugerirPc()">Procesar</button> -->
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<!-- </div> -->
+<!-- </ng-container> -->
