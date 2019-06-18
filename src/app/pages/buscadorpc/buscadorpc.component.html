@@ -263,9 +263,13 @@
                 <br>
 
                 <h2 class="text-center">Color que le gustaria</h2>
+
                 <div class="centrar">
-                    <input required type="text" name="Color" class="form-control mb-4" placeholder="Color" [(ngModel)]="preferencias.color" />
-                    <p> Marca: {{ preferencias.color }} <strong>:v</strong> </p>
+                    <input required type="text" name="Color" class="form-control mb-4" placeholder="Color" [(ngModel)]="colores" />
+                    <!-- <input required type="text" name="Color" class="form-control mb-4" placeholder="Color" (change)="cadenaColor(preferencias.color)" /> -->
+                    <!-- <input required type="number" required name="Presupuesto" [(ngModel)]="preferencias.presupuesto" class="form-control mb-4" placeholder="Presupuesto" /> -->
+                    <!-- <input type="text" > -->
+                    <!-- <p> Marca: {{ preferencias.color }} <strong>:v</strong> </p>  -->
                 </div>
                 <br>
                 <!-- <h2 class="text-center">Tamaño de la pantalla</h2>

@@ -13,7 +13,7 @@ export class BuscadorpcComponent implements OnInit {
 
   formulario = true;
   computadoras: any = [];
-
+  colores = ''.toUpperCase();
   clickMessage: string;
   arregloOcupacion: any = [];
   arregloMarcaPreferencia: any = [];
@@ -25,7 +25,8 @@ export class BuscadorpcComponent implements OnInit {
     edad: 0,
     nivelUso: ''.toUpperCase(),
     marcaPreferencia: [],
-    color: ''.toUpperCase(),
+    // color: ''.toUpperCase(),
+    color: [],
     almacenamiento: ''.toUpperCase()
   };
 
@@ -34,7 +35,7 @@ export class BuscadorpcComponent implements OnInit {
   /** buscar la forma en que se marquen varios y guardarlos*/
 
   // tslint:disable-next-line: variable-name
-  constructor(private _computadoraService: ComputadoraService) { }
+  constructor(private _computadoraService: ComputadoraService) {}
 
   ngOnInit() {
     this.arregloOcupacion = [];
@@ -46,10 +47,14 @@ export class BuscadorpcComponent implements OnInit {
     /**referencia al donde mandare los parametros */
     /* this._computadoraService.cargarConAlgoritmo() */
 
-    this._computadoraService.cargarConAlgoritmo(this.preferencias, this.desde).subscribe((resp: any) => {
-      this.computadoras = resp;
-      console.log(this.computadoras);
-    });
+    // this.colorPref();
+    this.preferencias.color = this.colores.split(',');
+    this._computadoraService
+      .cargarConAlgoritmo(this.preferencias, this.desde)
+      .subscribe((resp: any) => {
+        this.computadoras = resp;
+        console.log(this.computadoras);
+      });
 
     console.log(this.preferencias);
     if (this.formulario) {
@@ -57,11 +62,9 @@ export class BuscadorpcComponent implements OnInit {
     } else {
       this.formulario = true;
     }
-
   }
 
   agregarOcupacion(event) {
-
     console.log(event);
     if (event.target.checked) {
       // tslint:disable-next-line: prefer-const
@@ -74,7 +77,6 @@ export class BuscadorpcComponent implements OnInit {
           this.arregloOcupacion.splice(i, 1);
         }
       }
-
     }
 
     console.log(this.arregloOcupacion);
@@ -85,7 +87,6 @@ export class BuscadorpcComponent implements OnInit {
   }
 
   agregarMarcaPreferencia(event) {
-
     // este es para uno solo
     // if (event.target.checked) {
     //   this.preferencias.marcaPreferencia = event.target.id.toString();
@@ -100,11 +101,12 @@ export class BuscadorpcComponent implements OnInit {
       this.preferencias.marcaPreferencia.push(separacion);
     } else {
       for (let i = 0; i < this.preferencias.marcaPreferencia.length; i++) {
-        if (this.preferencias.marcaPreferencia[i] === event.target.id.toString()) {
+        if (
+          this.preferencias.marcaPreferencia[i] === event.target.id.toString()
+        ) {
           this.preferencias.marcaPreferencia.splice(i, 1);
         }
       }
-
     }
     // this.preferencias.marcaPreferencia = this.arregloMarcaPreferencia;
     console.log(this.preferencias.marcaPreferencia);
@@ -112,20 +114,37 @@ export class BuscadorpcComponent implements OnInit {
   }
 
   agregarHora(event) {
-
     if (event.target.checked) {
       this.preferencias.horas = event.target.id.toString();
     }
     // console.log(this.preferencias.horas);
   }
   agregarUso(event) {
-
     if (event.target.checked) {
       this.preferencias.nivelUso = event.target.id.toString();
     }
     // console.log(this.preferencias.nivelUso);
   }
 
+  colorPref() {
+    // separio los colores
+    let pref = this.colores.split(',');
+    // pref = this.colores.split(',WS');
+    // quito los espacios
+// tslint:disable-next-line: prefer-const
+    let cad: string = pref.toString();
+    pref = cad.split('\n');
+    // quito los tabuladores
+    cad = pref.toString();
+    pref = cad.split('\s');
+
+    this.preferencias.color = pref;
+    // pref = this.colores.split(',');
+    // this.preferencias.color = this.colores.split(',');
+    // this.preferencias.color = this.colores.split(',');
+    console.log('ESTOS SON LOS COLES O EL COLOR ');
+    console.log(this.preferencias.color);
+  }
 
   onclick() {
     this.clickMessage = 'You are my hero!';
