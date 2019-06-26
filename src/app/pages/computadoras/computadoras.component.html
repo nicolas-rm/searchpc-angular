@@ -11,7 +11,7 @@
                 <input required type="text" name="marca" [(ngModel)]="computadora.marca" class="form-control mb-4" placeholder="Marca" />
             </div>
             <!-- <input type="text" name="color" [(ngModel)]="computadora.color" class="form-control mb-4" placeholder="color">
-            <p> Marca: {{ computadora.color }} <strong>:v</strong> </p> -->
+          <p> Marca: {{ computadora.color }} <strong>:v</strong> </p> -->
 
             <!-- MODELO -->
             <div class="col-12 col-sm-12 col-md-4 col-lg-4">
@@ -31,10 +31,10 @@
             <!-- UNIDAD DE MEDIDA ALMACENAMIENTO -->
             <div class="col-12 col-sm-12 col-md-4 col-lg-4">
                 <select required name="tipoAlmacenamineto" [(ngModel)]="computadora.tipoAlmacenamineto" class="browser-default custom-select mb-4" placeholder="Tipo de almacenamiento">
-                    <option selected="true" disabled value="default">Tipo de almacenamiento</option>
-                    <option value="GIGABYTE">GIGABYTE</option>
-                    <option value="TERABYTE">TERABYTE</option>
-                </select>
+                  <option selected="true" disabled value="default">Tipo de almacenamiento</option>
+                  <option value="GIGABYTE">GIGABYTE</option>
+                  <option value="TERABYTE">TERABYTE</option>
+              </select>
             </div>
             <!-- MEMORIA RAM -->
             <div class="col-12 col-sm-12 col-md-4 col-lg-4">
@@ -50,18 +50,18 @@
             <!-- MARCA CPU -->
             <div class="col-12 col-sm-12 col-md-4 col-lg-4">
                 <select required name="marcaCpu" [(ngModel)]="computadora.marcaCpu" class="browser-default custom-select mb-4" placeholder="Seleccionar una marca de CPU">
-                    <option selected="true" disabled value="default">Seleccionar una marca de CPU</option>
-                    <option value="INTEL">Intel</option>
-                    <option value="AMD">Amd</option>
-                </select>
+                  <option selected="true" disabled value="default">Seleccionar una marca de CPU</option>
+                  <option value="INTEL">Intel</option>
+                  <option value="AMD">Amd</option>
+              </select>
             </div>
             <!-- LECTOR DE CD -->
             <div class="col-12 col-sm-12 col-md-4 col-lg-4">
                 <select required name="lectorCD" [(ngModel)]="computadora.lectorCD" class="browser-default custom-select mb-4">
-                    <option selected="true" value="default" disabled>¿Tiene lector de CD?</option>
-                    <option value="true">Si</option>
-                    <option value="false">No</option>
-                </select>
+                  <option selected="true" value="default" disabled>¿Tiene lector de CD?</option>
+                  <option value="true">Si</option>
+                  <option value="false">No</option>
+              </select>
             </div>
         </div>
         <!-- CUARTA FILA -->
@@ -70,18 +70,18 @@
             <!-- TARJETA INTEGRADA -->
             <div class="col-12 col-sm-12 col-md-4 col-lg-4">
                 <select required name="tarjetaIntegrada" [(ngModel)]="computadora.tajetaIntegrada" class="browser-default custom-select mb-4">
-                    <option selected="true" disabled value="default">¿Tiene tarjeta integrada?</option>
-                    <option value="true">Si</option>
-                    <option value="false">No</option>
-                </select>
+                  <option selected="true" disabled value="default">¿Tiene tarjeta integrada?</option>
+                  <option value="true">Si</option>
+                  <option value="false">No</option>
+              </select>
             </div>
             <!-- TARJETA DEDICADA -->
             <div class="col-12 col-sm-12 col-md-4 col-lg-4">
                 <select required name="tarjetaDedicada" [(ngModel)]="computadora.tajetaDedicada" class="browser-default custom-select mb-4">
-                    <option selected="true" disabled value="default">¿Tiene tarjeta Dedicada?</option>
-                    <option value="true">Si</option>
-                    <option value="false">No</option>
-                </select>
+                  <option selected="true" disabled value="default">¿Tiene tarjeta Dedicada?</option>
+                  <option value="true">Si</option>
+                  <option value="false">No</option>
+              </select>
             </div>
             <!-- MODELO TARJETA DE VIDEO -->
             <div class="col-12 col-sm-12 col-md-4 col-lg-4">
@@ -126,10 +126,10 @@
             <!-- ranura de expansion -->
             <div class="col-12 col-sm-12 col-md-4 col-lg-4">
                 <select required name="expansionRam" [(ngModel)]="computadora.expansionRam" class="browser-default custom-select mb-4">
-                    <option selected="true" disabled value="default">¿Tiene ranura de expansion?</option>
-                    <option value="true">Si</option>
-                    <option value="false">No</option>
-                </select>
+                  <option selected="true" disabled value="default">¿Tiene ranura de expansion?</option>
+                  <option value="true">Si</option>
+                  <option value="false">No</option>
+              </select>
             </div>
             <!-- tamaño de la pantalla -->
             <div class="col-12 col-sm-12 col-md-4 col-lg-4">
@@ -140,14 +140,14 @@
             <!-- sistema operativo -->
             <div class="col-12 col-sm-12 col-md-4 col-lg-4">
                 <select required name="sistemaOperativo" [(ngModel)]="computadora.sistemaOperativo" class="browser-default custom-select mb-4">
-                    <option selected="true" disabled value="default">Sistema operativo cargado</option>
-                    <option value="WINDOWS10PRO">Windows 10 Pro</option>
-                    <option value="WINDOWS10HOME">Windows 10 Home</option>
-                    <option value="WINDOWS10SL">Windows 10 Single Lenguaje</option>
-                    <option value="DISTLINUX">Distro Linux</option>
-                    <option value="MACOSX">MACOSX</option>
-                    <option value="MACOSC">MACOSC</option>
-                </select>
+                  <option selected="true" disabled value="default">Sistema operativo cargado</option>
+                  <option value="WINDOWS10PRO">Windows 10 Pro</option>
+                  <option value="WINDOWS10HOME">Windows 10 Home</option>
+                  <option value="WINDOWS10SL">Windows 10 Single Lenguaje</option>
+                  <option value="DISTLINUX">Distro Linux</option>
+                  <option value="MACOSX">MACOSX</option>
+                  <option value="MACOSC">MACOSC</option>
+              </select>
             </div>
         </div>
         <!-- octava fila -->
@@ -193,9 +193,12 @@
 
 
         </div>
-        <div class="custom-file">
-            <input type="file" class="custom-file-input" id="customFileLang" lang="es">
-            <label class="custom-file-label" for="customFileLang"></label>
+        <!-- <div class="custom-file">
+          <input type="file" class="custom-file-input" id="customFileLang" lang="es">
+          <label class="custom-file-label" for="customFileLang"></label>
+      </div> -->
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+            <input required type="text" name="Imagen" [(ngModel)]="computadora.img" class="form-control mb-4" placeholder="Imagen" />
         </div>
         <!-- Sign in button -->
         <button class="btn btn-info btn-block my-4" type="submit">Agregar</button>

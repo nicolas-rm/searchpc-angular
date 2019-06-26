@@ -36,8 +36,9 @@
         <div class="mt-5 col-12 col-sm-12 col-md-4 col-lg-4" *ngFor="let computadora of computadoras;let i = index">
             <mdb-card>
                 <!--Card image-->
-                <mdb-card-img [src]="computadora.img" alt="Card image cap"></mdb-card-img>
-                <!--Card content-->
+
+                <mdb-card-img class="sizeCard" [src]="computadora.img" alt="Card image cap"></mdb-card-img>
+
                 <mdb-card-body>
 
                     <!--Title-->
@@ -50,7 +51,7 @@
                         <h5>
                             <strong>Precio</strong>
                             <h6 class="indigo-text">
-                                <strong> {{ computadora.precio }}</strong>
+                                <strong>  $ {{ computadora.precio }}</strong>
                             </h6>
                         </h5>
                     </mdb-card-title>
@@ -75,8 +76,8 @@
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLongTitleSC">Encuesta</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                </button>
+                  <span aria-hidden="true">×</span>
+              </button>
             </div>
 
             <div class="modal-body">
@@ -200,12 +201,12 @@
                 <div class="centrar">
 
                     <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="HP" (change)="agregarMarcaPreferencia($event)">
+                        <input type="checkbox" class="custom-control-input" checked id="HP" (change)="agregarMarcaPreferencia($event)">
                         <label class="custom-control-label" for="HP">Hp</label>
                     </div>
 
                     <div class="custom-control custom-switch">
-                        <input type="checkbox" class="custom-control-input" id="DELL" (change)="agregarMarcaPreferencia($event)">
+                        <input type="checkbox" class="custom-control-input" checked id="DELL" (change)="agregarMarcaPreferencia($event)">
                         <label class="custom-control-label" for="DELL">Dell</label>
                     </div>
 
@@ -273,9 +274,9 @@
                 </div>
                 <br>
                 <!-- <h2 class="text-center">Tamaño de la pantalla</h2>
-                <div class="centrar">
-                    <input required type="text" name="Tamaño" class="form-control mb-4" placeholder="Tamaño" />
-                </div> -->
+              <div class="centrar">
+                  <input required type="text" name="Tamaño" class="form-control mb-4" placeholder="Tamaño" />
+              </div> -->
                 <br>
                 <h2 class="text-center">Cantidad de almacenamiento</h2>
                 <div class="centrar">
@@ -283,14 +284,14 @@
                 </div>
                 <br>
                 <!-- codigo para escribir en un lado y pasarlo en el otro automaticamente
-                <input type="text" name="color" [(ngModel)]="computadora.color" class="form-control mb-4" placeholder="color">
-            <p> Marca: {{ computadora.color }} <strong>:v</strong> </p> -->
+              <input type="text" name="color" [(ngModel)]="computadora.color" class="form-control mb-4" placeholder="color">
+          <p> Marca: {{ computadora.color }} <strong>:v</strong> </p> -->
 
 
                 <!-- <h2 class="text-center">Tamaño del equipo</h2>
-                <div class="centrar">
-                    <input required type="number" name="tamanoequipo" class="form-control mb-4" placeholder="Tamaño Del equipo" [(ngModel)]="preferencias.ta"/>
-                </div> -->
+              <div class="centrar">
+                  <input required type="number" name="tamanoequipo" class="form-control mb-4" placeholder="Tamaño Del equipo" [(ngModel)]="preferencias.ta"/>
+              </div> -->
 
                 <div class="modal-footer rem-dimensions">
                     <button type="button" class="btn btn-secondary waves-effect waves-light" data-dismiss="modal">Cancelar</button>
@@ -314,8 +315,8 @@
                         <div class="modal-header">
                             <h5 class="modal-title" id="caracteristicasTittle">Caracteristicas Del Ordenador Portatil</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">×</span>
-                      </button>
+                        <span aria-hidden="true">×</span>
+                    </button>
                         </div>
                         <div class="modal-body">
                             <h5 class="left"> Marca: {{ computador.marca }}</h5>
@@ -328,14 +329,14 @@
                             <h5 class="left"> Entradas De Video: {{ computador.video }}</h5>
                             <!-- <h5 class="left"> Tarjeta Integrada: {{ computador.tajetaIntegrada }}</h5> -->
                             <!--  <h5 class="left" *ngIf="computador.tajetaDedicada"> Tarjeta Dedicada: {{ computador.modeloTarjetaVideo }}</h5>
-                    <h5 class="left"> <strong>Tamaño De La Pantalla <br> (Inches - Pulgadas):</strong> {{ computador.tamanoPantalla }}</h5>
-                    <h5 class="left"> Resolucion: {{ computador.resolucion }}</h5>
-                    <h5 class="left"> Ancho: {{ computador.ancho }}</h5>
-                    <h5 class="left"> Alto: {{ computador.alto }}</h5>
-                    <h5 class="left"> Peso: {{ computador.peso }}</h5>
-                    <h5 class="left"> Sistema Operativo: {{ computador.sistemaOperativo }}</h5>
-                    <h5 class="left"> Usb 2.0: {{ computador.usb2 }}</h5>
-                    <h5 class="left"> Usb 3.0: {{ computador.usb3 }}</h5> -->
+                  <h5 class="left"> <strong>Tamaño De La Pantalla <br> (Inches - Pulgadas):</strong> {{ computador.tamanoPantalla }}</h5>
+                  <h5 class="left"> Resolucion: {{ computador.resolucion }}</h5>
+                  <h5 class="left"> Ancho: {{ computador.ancho }}</h5>
+                  <h5 class="left"> Alto: {{ computador.alto }}</h5>
+                  <h5 class="left"> Peso: {{ computador.peso }}</h5>
+                  <h5 class="left"> Sistema Operativo: {{ computador.sistemaOperativo }}</h5>
+                  <h5 class="left"> Usb 2.0: {{ computador.usb2 }}</h5>
+                  <h5 class="left"> Usb 3.0: {{ computador.usb3 }}</h5> -->
                             <div class="modal-footer rem-dimensions">
                                 <button type="button" class="btn btn-secondary waves-effect waves-light" data-dismiss="modal">Cancelar</button>
                                 <!-- <button type="button" class="btn btn-primary waves-effect waves-light" data-dismiss="modal" (click)="sugerirPc()">Procesar</button> -->
@@ -347,6 +348,7 @@
         </div>
     </div>
 </div>
+
 
 <!-- </div> -->
 <!-- </ng-container> -->
