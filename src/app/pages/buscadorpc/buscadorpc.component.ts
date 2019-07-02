@@ -21,12 +21,12 @@ export class BuscadorpcComponent implements OnInit {
   preferencias = {
     ocupacion: ''.toUpperCase(),
     horas: 0,
-    presupuesto: 0,
+    presupuesto: 18000,
     edad: 0,
     nivelUso: ''.toUpperCase(),
-    marcaPreferencia: [],
+    marcaPreferencia: ['DELL', 'HP'],
     // color: ''.toUpperCase(),
-    color: [],
+    color: ['GRIS', 'NEGRO'],
     almacenamiento: ''.toUpperCase()
   };
 
