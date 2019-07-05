@@ -10,11 +10,18 @@ import { ComputadorasComponent } from './pages/computadoras/computadoras.compone
 // HttpClientModule
 import { HttpClientModule } from '@angular/common/http';
 
-//Routing
+// Routing
 import { RouterModule, Routes } from '@angular/router';
 import { BuscadorpcComponent } from './pages/buscadorpc/buscadorpc.component';
 import { ResultadosSugerenciaComponent } from './pages/resultados-sugerencia/resultados-sugerencia.component';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// material
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material';
+// import { MatMomentDateModule } from '@angular/material-moment-adapter';
 
 // Routes
 const routes: Routes = [
@@ -38,7 +45,15 @@ const routes: Routes = [
     // AngularFontAwesomeModule
     FormsModule,
     ReactiveFormsModule,
-
+    BrowserAnimationsModule,
+    // BrowserModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatAutocompleteModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

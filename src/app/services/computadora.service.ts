@@ -32,7 +32,7 @@ export class ComputadoraService {
     /*aqui mando a llamar a la ruta del backend server*/
 
     const url = this.URL_SERVICIOS + '/computadora/sugerencia';
-
+    console.log('cargarConAlgoritmo');
 // tslint:disable-next-line: max-line-length
     // http://localhost:3000/computadora/sugerencia?desde=0&presupuesto=15252.2&edad=15&horas=12&ocupacion=estudiante, desarrollador, diseñador
     return this._http.post(url, preferencias, { headers: this.headers }).pipe(

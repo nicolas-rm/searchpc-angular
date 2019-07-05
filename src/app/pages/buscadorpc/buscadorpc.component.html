@@ -34,34 +34,21 @@
 <div class="container animated fadeIn" *ngIf="!formulario">
     <h1>Listado Posts</h1>
     <div class="row">
-        <div class="mt-5 col-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="col">
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search...">
+                <input type="text" aria-label="Number" class="form-control" matInput [formControl]="myControlAuto" name="filterPost" placeholder="Search..." [matAutocomplete]="auto">
                 <!-- <input type="text" class="form-control" name="filterPost" placeholder="Search..." [(ngModel)]="filterPost"> -->
+                <mat-autocomplete #auto="matAutocomplete" autoActiveFirstOption>
+                    <mat-option *ngFor="let compu of computadoras;let o = index" [value]="compu">
+                        <!-- <mat-option *ngFor="let option of filteredOptions | async" [value]="option"> -->
+                        {{ compu.marca +" "+ compu.modelo}}
+                    </mat-option>
+                </mat-autocomplete>
             </div>
         </div>
     </div>
+
     <br>
-    <div class="row">
-        <div class="col">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>TITLE</th>
-                        <th>DATE</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- <tr *ngFor="let post of posts | filter:filterPost">
-                        <td> {{post.id}} </td>
-                        <td> {{post.title}} </td>
-                        <td> {{post.date}} </td>
-                    </tr> -->
-                </tbody>
-            </table>
-        </div>
-    </div>
 
     <br>
     <div class="row">

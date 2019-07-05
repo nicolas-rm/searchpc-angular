@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import swal from 'sweetalert2';
 import { ComputadoraService } from '../../services/computadora.service';
+
+// import { Component } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { Observable } from 'rxjs';
+import { map, startWith } from 'rxjs/operators';
 
 @Component({
   selector: 'app-buscadorpc',
@@ -10,6 +14,7 @@ import { ComputadoraService } from '../../services/computadora.service';
 export class BuscadorpcComponent implements OnInit {
   // tslint:disable-next-line: jsdoc-format
   /**variables que utilizare para captar todo lo que se marque */
+
 
   formulario = true;
   computadoras: any = [];
@@ -30,17 +35,50 @@ export class BuscadorpcComponent implements OnInit {
     almacenamiento: ''.toUpperCase()
   };
 
+  // PIPE
+  // myControlPlain = new FormControl();
+  myControlAuto = new FormControl();
+
+  // options: string[] = ['One', 'Two', 'Three'];
+  options: string[];
+
+  filteredOptions: Observable<string[]>;
+  // PIPE
   /** */
   // tslint:disable-next-line: jsdoc-format
   /** buscar la forma en que se marquen varios y guardarlos*/
 
   // tslint:disable-next-line: variable-name
-  constructor(private _computadoraService: ComputadoraService) {}
+  constructor(private _computadoraService: ComputadoraService) { }
 
   ngOnInit() {
     this.arregloOcupacion = [];
     this.arregloMarcaPreferencia = [];
+
+    // PIPE
+    this.filteredOptions = this.myControlAuto.valueChanges
+      .pipe(
+        startWith(''),
+        map(value => this._filter(value))
+      );
   }
+
+  // PIPE
+  private _filter(value: string): string[] {
+// tslint:disable-next-line: prefer-const
+    let filterValue = value.toLowerCase();
+    console.log(value);
+
+
+    /* for (let a = 0; a < this.computadoras.length(); a++) {
+      this.computadoras.
+    } */
+    // tslint:disable-next-line: prefer-const
+    let ret = this.options.filter(option => option.toLowerCase().includes(filterValue));
+    console.log(ret);
+    return ret;
+  }
+// PIPE
 
   sugerirPc(/*todos los argumentos con los que voy a validar */) {
     // tslint:disable-next-line: jsdoc-format
@@ -53,7 +91,11 @@ export class BuscadorpcComponent implements OnInit {
       .cargarConAlgoritmo(this.preferencias, this.desde)
       .subscribe((resp: any) => {
         this.computadoras = resp;
+        this.options = resp;
+        console.log('THIS.COMPUTADORAS : ');
         console.log(this.computadoras);
+        console.log('THIS.OPTIONES : ');
+        console.log(this.options);
       });
 
     console.log(this.preferencias);
@@ -131,7 +173,7 @@ export class BuscadorpcComponent implements OnInit {
     let pref = this.colores.split(',');
     // pref = this.colores.split(',WS');
     // quito los espacios
-// tslint:disable-next-line: prefer-const
+    // tslint:disable-next-line: prefer-const
     let cad: string = pref.toString();
     pref = cad.split('\n');
     // quito los tabuladores
