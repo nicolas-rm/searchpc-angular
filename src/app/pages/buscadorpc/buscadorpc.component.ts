@@ -18,6 +18,7 @@ export class BuscadorpcComponent implements OnInit {
 
   formulario = true;
   computadoras: any = [];
+  areaText = '';
   colores = ''.toUpperCase();
   clickMessage: string;
   arregloOcupacion: any = [];
@@ -31,7 +32,7 @@ export class BuscadorpcComponent implements OnInit {
     nivelUso: ''.toUpperCase(),
     marcaPreferencia: ['DELL', 'HP'],
     // color: ''.toUpperCase(),
-    color: ['GRIS', 'NEGRO'],
+    color: [],
     almacenamiento: ''.toUpperCase()
   };
 

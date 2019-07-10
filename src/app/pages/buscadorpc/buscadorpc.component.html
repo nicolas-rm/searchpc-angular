@@ -289,11 +289,14 @@
                 <h2 class="text-center">Color que le gustaria</h2>
 
                 <div class="centrar">
-                    <input required type="text" name="Color" class="form-control mb-4" placeholder="Color" [(ngModel)]="colores" />
+                    <!-- <input type="text" required type="text" name="Color" class="form-control mb-4" placeholder="Color" [(ngModel)]="colores" /> -->
                     <!-- <input required type="text" name="Color" class="form-control mb-4" placeholder="Color" (change)="cadenaColor(preferencias.color)" /> -->
                     <!-- <input required type="number" required name="Presupuesto" [(ngModel)]="preferencias.presupuesto" class="form-control mb-4" placeholder="Presupuesto" /> -->
                     <!-- <input type="text" > -->
-                    <!-- <p> Marca: {{ preferencias.color }} <strong>:v</strong> </p>  -->
+                    <!-- <p> Marca: {{ preferencias.color }} <strong>:v</strong> </p> -->
+
+                    <!-- <input type="text" name="color" [(ngModel)]="computadora.color" class="form-control mb-4" placeholder="color"> -->
+                    <!-- <p> Marca: {{ colores }} <strong>:v</strong> </p>  -->
                 </div>
                 <br>
                 <!-- <h2 class="text-center">Tamaño de la pantalla</h2>
@@ -306,6 +309,39 @@
                     <input required type="text" name="almacenamiento" class="form-control mb-4" placeholder="Almacenamiento" [(ngModel)]="preferencias.almacenamiento" />
                 </div>
                 <br>
+
+                <div class="container">
+                    <div class="media mt-3 shadow-textarea">
+                        <!-- <img class="d-flex rounded-circle avatar z-depth-1-half mr-3" src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="Generic placeholder image"> -->
+                        <div class="media-body">
+                            <!-- <h5 class="mt-0 font-weight-bold blue-text">Danny Tatuum</h5> -->
+                            <div class="form-group basic-textarea rounded-corners">
+                                <textarea [(ngModel)]="areaText" class="form-control z-depth-1" id="exampleFormControlTextarea345" rows="6" placeholder="Descripcion De Tu Equipo Perpecto">
+                                </textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- CODIGO PARA COMPROBAR QUE SI FUNCIONA LO QUE SE ESCRIBE -->
+                    <!-- <p> Marca: {{ areaText }} <strong>:v</strong> </p>  -->
+                    <!-- CODIGO PARA COMPROBAR QUE SI FUNCIONA LO QUE SE ESCRIBE -->
+
+
+                    <!-- <input type="text" required type="text" name="Color" class="form-control mb-4" placeholder="Color" [(ngModel)]="colores" /> -->
+                    <!-- <div class="media">
+                        <img class="d-flex rounded-circle avatar z-depth-1-half mr-3" src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" alt="Avatar">
+                        <div class="media-body">
+                            <h5 class="mt-0 font-weight-bold blue-text">Anna Smith</h5>
+                            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
+                        </div>
+                    </div>
+                    <div class="media">
+                        <img class="d-flex rounded-circle avatar z-depth-1-half mr-3" src="https://mdbootstrap.com/img/Photos/Avatars/avatar-10.jpg" alt="Avatar">
+                        <div class="media-body">
+                            <h5 class="mt-0 font-weight-bold blue-text">Caroline Horwitz</h5>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis odit minima eaque dignissimos recusandae officiis commodi nulla est, tempore atque voluptas non quod maxime, iusto, debitis aliquid? Iure ipsum, itaque.
+                        </div>
+                    </div> -->
+                </div>
                 <!-- codigo para escribir en un lado y pasarlo en el otro automaticamente
               <input type="text" name="color" [(ngModel)]="computadora.color" class="form-control mb-4" placeholder="color">
           <p> Marca: {{ computadora.color }} <strong>:v</strong> </p> -->

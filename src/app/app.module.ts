@@ -21,6 +21,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material';
+// import { Red } from './pages/red.neuronal/red.neuronal.component';
+// import { Neuronal } from './pages/neuronal.red/neuronal.red.component';
 // import { MatMomentDateModule } from '@angular/material-moment-adapter';
 
 // Routes
@@ -35,7 +37,9 @@ const routes: Routes = [
     AppComponent,
     ComputadorasComponent,
     BuscadorpcComponent,
-    ResultadosSugerenciaComponent
+    ResultadosSugerenciaComponent,
+    // Red.NeuronalComponent,
+    // Neuronal.RedComponent,
   ],
   imports: [
     BrowserModule,
