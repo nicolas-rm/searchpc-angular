@@ -5,6 +5,7 @@ import { ComputadoraService } from '../../services/computadora.service';
 import { FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
+import { RedNeuronalComponent } from '../red-neuronal/red-neuronal.component';
 
 @Component({
   selector: 'app-buscadorpc',
@@ -15,7 +16,7 @@ export class BuscadorpcComponent implements OnInit {
   // tslint:disable-next-line: jsdoc-format
   /**variables que utilizare para captar todo lo que se marque */
 
-
+  // colors = new RedNeuronalComponent();
   formulario = true;
   computadoras: any = [];
   areaText = '';
@@ -153,6 +154,7 @@ export class BuscadorpcComponent implements OnInit {
     }
     // this.preferencias.marcaPreferencia = this.arregloMarcaPreferencia;
     console.log(this.preferencias.marcaPreferencia);
+    // console.log(this.colors);
     // console.log(this.preferencias.color);
   }
 
