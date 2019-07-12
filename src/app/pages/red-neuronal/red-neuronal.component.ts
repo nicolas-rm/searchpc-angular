@@ -9,6 +9,8 @@ import { BuscadorpcComponent } from './../buscadorpc/buscadorpc.component';
 })
 export class RedNeuronalComponent implements OnInit {
 
+
+
   palabras = {
     colores: ['rojo', 'colorado', 'carmesí',
       'rubí', 'frutilla', 'bermellón', 'escarlata',
@@ -42,10 +44,11 @@ export class RedNeuronalComponent implements OnInit {
       'marfil', 'plata', 'plateado',
       'zinc', 'gris', 'negro'
     ],
-    estilo: ['bonita']
+    estilo: ['bonita'],
+    tamaño: ['mini', 'pequeña', 'mediana', 'grande']
   };
-// tslint:disable-next-line: variable-name
-  constructor(private _BuscadorpcComponent: BuscadorpcComponent) { }
+  // tslint:disable-next-line: variable-name
+  constructor() { }
 
   ngOnInit() {
   }
@@ -58,13 +61,24 @@ export class RedNeuronalComponent implements OnInit {
     for (let index = 0; index < this.palabras.colores.length; index++) {
       upperCase.push(this.palabras.colores[index].toUpperCase());
     }
+
     this.palabras.colores = [];
     return this.palabras.colores = upperCase;
   }
 
-  _algorithmic() {
-// tslint:disable-next-line: no-shadowed-variable
-// tslint:disable-next-line: prefer-const
-    let areaText = this._BuscadorpcComponent.areaText;
+  algorithm(textArea) {
+    let palabras = textArea.split(' ');
+    let colores = [];
+
+    // se va a recorrer el arreglo y se van a buscar las palabras
+    // tslint:disable-next-line: prefer-for-of
+    for (let j = 0; j < this.palabras.colores.length; j++) {
+      // tslint:disable-next-line: prefer-for-of
+      for (let i = 0; i < palabras.length; i++) {
+        if (palabras[i].equals(this.palabras.colores[j])) {
+          colores.push(palabras[i]);
+        }
+      }
+    }
   }
 }
