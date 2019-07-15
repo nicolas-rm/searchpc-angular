@@ -40,7 +40,7 @@
                 <input id="identificador" type="text" placeholder="Filtered autocomplete" aria-label="Number" matInput [formControl]="myControlAuto" [matAutocomplete]="auto">
                 <!-- <input type="text" class="form-control" name="filterPost" placeholder="Search..."> -->
                 <mat-autocomplete #auto="matAutocomplete" autoActiveFirstOption>
-                    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                    <mat-option *ngFor="let option of filteredOptions | async" [value]="option" (click)="click(option)">
                         {{option}}
                     </mat-option>
                     <!--
@@ -49,7 +49,7 @@
             </mat-form-field>
             <!-- </div> -->
         </div>
-        <p> Marca: {{ filterPC }} <strong>:v</strong> </p>
+        <!-- <p> Marca: {{ filterPC }} <strong>:v</strong> </p> -->
     </div>
 
     <br>
@@ -415,8 +415,7 @@
     var identificador = document.getElementById('identificador');
     valor.addEventListener('keypress', function(evento) {
         if (evento.keyCode == 13) {
-            var valor = document.getElementById('identificador').value;
-            // document.getElementById
+            this.
         }
     });
 </script>

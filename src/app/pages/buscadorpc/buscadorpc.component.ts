@@ -80,7 +80,8 @@ export class BuscadorpcComponent implements OnInit {
   // PIPE
   private _filter(value: string): string[] {
     const filterValue = value.toLowerCase();
-    console.log(value);
+    // ESTE ES EL VALOR QUE VA QUEDANDO DEL INPUT
+    console.log('ESTE ES EL VALOR DE VALUE : ' + value);
 
     // tslint:disable-next-line: prefer-const
     let ret = this.options.filter(option => option.toLowerCase().includes(filterValue));
@@ -115,6 +116,8 @@ export class BuscadorpcComponent implements OnInit {
     } else {
       this.formulario = true;
     }
+
+
   }
 
   agregarOcupacion(event) {
@@ -174,5 +177,10 @@ export class BuscadorpcComponent implements OnInit {
 
   redNeuronal() {
     this.RedNeuronalComponent.algorithm(this.areaText);
+  }
+
+  click(valor) {
+
+    console.log('el valor de d :' + valor);
   }
 }
