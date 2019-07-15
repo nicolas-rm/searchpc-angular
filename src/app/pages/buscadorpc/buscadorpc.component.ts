@@ -13,7 +13,7 @@ import { RedNeuronalComponent } from '../red-neuronal/red-neuronal.component';
   styles: []
 })
 export class BuscadorpcComponent implements OnInit {
-
+  // filterPC = this.options;
   buscador = this;
   formulario = true;
   computadoras: any = [];
@@ -52,7 +52,6 @@ export class BuscadorpcComponent implements OnInit {
 
   ngOnInit() {
     this.arregloOcupacion = [];
-    this.arregloMarcaPreferencia = [];
 
     // PIPE
     this.filteredOptions = this.myControlAuto.valueChanges
@@ -65,11 +64,15 @@ export class BuscadorpcComponent implements OnInit {
   }
 
   private _algorhitmicPipe() {
-    //  tslint:disable-next-line: prefer-for-of
+    // DE AQUI SE SACAN TODOS LOS DATOS DE LAS COMPUTADORAS RECOMENDADAS, PERO
+    // ESPECIFICAMENTE SOLAMENTE LA MARCA Y EL MODELO
+    // tslint:disable-next-line: prefer-for-of
     for (let index = 0; index < this.comp.length; index++) {
-      this.options.push(this.comp[index].marca + ' ' +this.comp[index].modelo);
+      this.options.push(this.comp[index].marca + ' ' + this.comp[index].modelo);
     }
-
+    this.arregloMarcaPreferencia = [];
+    // let a = this.myControlAuto.asyncValidator;
+    // console.log('valor de a : ' + a);
     console.log('COMPUTADORAS THIS.OPTION');
     //  console.log('ESTAS' + this.options.length);
     console.log(this.options);
@@ -81,7 +84,8 @@ export class BuscadorpcComponent implements OnInit {
 
     // tslint:disable-next-line: prefer-const
     let ret = this.options.filter(option => option.toLowerCase().includes(filterValue));
-    console.log(ret);
+    // ESTE ES EL VALOR QUE COINCIDE CUANDO GENERA UNA BUSQUEDA. (RET)
+    console.log('EL VALOR DE RET ES : ' + ret);
     return ret;
   }
 

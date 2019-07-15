@@ -37,16 +37,19 @@
         <div class="col-12 col-sm-12 col-md-12 col-lg-12">
             <!-- <div class="form-group"> -->
             <mat-form-field style="display: block;">
-                <input type="text" placeholder="Filtered autocomplete" aria-label="Number" matInput [formControl]="myControlAuto" [matAutocomplete]="auto">
+                <input id="identificador" type="text" placeholder="Filtered autocomplete" aria-label="Number" matInput [formControl]="myControlAuto" [matAutocomplete]="auto">
                 <!-- <input type="text" class="form-control" name="filterPost" placeholder="Search..."> -->
                 <mat-autocomplete #auto="matAutocomplete" autoActiveFirstOption>
                     <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
                         {{option}}
                     </mat-option>
+                    <!--
+                    <textarea [(ngModel)]="areaText" class="form-control z-depth-1" id="exampleFormControlTextarea345" rows="6" placeholder="Descripcion De Tu Equipo Perpecto"></textarea> -->
                 </mat-autocomplete>
             </mat-form-field>
             <!-- </div> -->
         </div>
+        <p> Marca: {{ filterPC }} <strong>:v</strong> </p>
     </div>
 
     <br>
@@ -408,6 +411,14 @@
     </div>
 </div>
 
-
+<script>
+    var identificador = document.getElementById('identificador');
+    valor.addEventListener('keypress', function(evento) {
+        if (evento.keyCode == 13) {
+            var valor = document.getElementById('identificador').value;
+            // document.getElementById
+        }
+    });
+</script>
 <!-- </div> -->
 <!-- </ng-container> -->
