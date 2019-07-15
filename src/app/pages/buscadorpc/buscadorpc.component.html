@@ -34,23 +34,23 @@
 <div class="container animated fadeIn" *ngIf="!formulario">
     <h1>Listado Posts</h1>
     <div class="row">
-        <div class="col">
-            <div class="form-group">
-                <input type="text" aria-label="Number" class="form-control" matInput [formControl]="myControlAuto" name="filterPost" placeholder="Search..." [matAutocomplete]="auto">
-                <!-- <input type="text" class="form-control" name="filterPost" placeholder="Search..." [(ngModel)]="filterPost"> -->
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+            <!-- <div class="form-group"> -->
+            <mat-form-field style="display: block;">
+                <input type="text" placeholder="Filtered autocomplete" aria-label="Number" matInput [formControl]="myControlAuto" [matAutocomplete]="auto">
+                <!-- <input type="text" class="form-control" name="filterPost" placeholder="Search..."> -->
                 <mat-autocomplete #auto="matAutocomplete" autoActiveFirstOption>
-                    <mat-option *ngFor="let compu of computadoras;let o = index" [value]="compu">
-                        <!-- <mat-option *ngFor="let option of filteredOptions | async" [value]="option"> -->
-                        {{ compu.marca +" "+ compu.modelo}}
+                    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                        {{option}}
                     </mat-option>
                 </mat-autocomplete>
-            </div>
+            </mat-form-field>
+            <!-- </div> -->
         </div>
     </div>
 
     <br>
 
-    <br>
     <div class="row">
         <div class="mt-5 col-12 col-sm-12 col-md-4 col-lg-4" *ngFor="let computadora of computadoras;let i = index">
             <mdb-card>

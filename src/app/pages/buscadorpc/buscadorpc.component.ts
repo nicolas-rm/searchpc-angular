@@ -41,7 +41,8 @@ export class BuscadorpcComponent implements OnInit {
 
   RedNeuronalComponent = new RedNeuronalComponent();
   // options: string[] = ['One', 'Two', 'Three'];
-  options: string[];
+  comp: any = [];
+  options: string[] = [];
 
   filteredOptions: Observable<string[]>;
   // PIPE
@@ -55,21 +56,29 @@ export class BuscadorpcComponent implements OnInit {
 
     // PIPE
     this.filteredOptions = this.myControlAuto.valueChanges
-    .pipe(
-      startWith(''),
-      map(value => this._filter(value))
+      .pipe(
+        startWith(''),
+        map(value => this._filter(value))
       );
-      // console.log(this.areaText);
-      // constructor() { }
+    // console.log(this.areaText);
+    // constructor() { }
   }
 
-  private _algorhitmic() {
+  private _algorhitmicPipe() {
+    //  tslint:disable-next-line: prefer-for-of
+    for (let index = 0; index < this.comp.length; index++) {
+      this.options.push(this.comp[index].marca + ' ' +this.comp[index].modelo);
+    }
+
+    console.log('COMPUTADORAS THIS.OPTION');
+    //  console.log('ESTAS' + this.options.length);
+    console.log(this.options);
   }
   // PIPE
   private _filter(value: string): string[] {
-    // tslint:disable-next-line: prefer-const
-    let filterValue = value.toLowerCase();
+    const filterValue = value.toLowerCase();
     console.log(value);
+
     // tslint:disable-next-line: prefer-const
     let ret = this.options.filter(option => option.toLowerCase().includes(filterValue));
     console.log(ret);
@@ -83,16 +92,18 @@ export class BuscadorpcComponent implements OnInit {
     this.preferencias.color = this.colores.split(',');
 
     // AQUI DEBE DE LLAMARSE A LOS METODOS DE RED-NEURONAl
-    this.redNeuronal();
+    // this.redNeuronal();
     // console.log(this.RedNeuronalComponent._upercase);
     this._computadoraService
       .cargarConAlgoritmo(this.preferencias, this.desde)
       .subscribe((resp: any) => {
         this.computadoras = resp;
-        this.options = resp;
+        this.comp = resp;
         console.log('THIS.COMPUTADORAS : ');
         console.log(this.computadoras);
+        this._algorhitmicPipe();
       });
+
 
     console.log(this.preferencias);
     if (this.formulario) {
