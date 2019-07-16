@@ -7,6 +7,8 @@ import { Observable } from 'rxjs';
 import { map, startWith } from 'rxjs/operators';
 import { RedNeuronalComponent } from '../red-neuronal/red-neuronal.component';
 
+declare const myTest: any;
+
 @Component({
   selector: 'app-buscadorpc',
   templateUrl: './buscadorpc.component.html',
@@ -14,7 +16,7 @@ import { RedNeuronalComponent } from '../red-neuronal/red-neuronal.component';
 })
 export class BuscadorpcComponent implements OnInit {
   // filterPC = this.options;
-  buscador = this;
+  buscador = [false, -1];
   formulario = true;
   computadoras: any = [];
   areaText = '';
@@ -35,6 +37,9 @@ export class BuscadorpcComponent implements OnInit {
     almacenamiento: ''.toUpperCase()
   };
 
+  mar = ' ';
+  mod = ' ';
+
   // PIPE
   // myControlPlain = new FormControl();
   myControlAuto = new FormControl();
@@ -52,7 +57,6 @@ export class BuscadorpcComponent implements OnInit {
 
   ngOnInit() {
     this.arregloOcupacion = [];
-
     // PIPE
     this.filteredOptions = this.myControlAuto.valueChanges
       .pipe(
@@ -181,6 +185,29 @@ export class BuscadorpcComponent implements OnInit {
 
   click(valor) {
 
-    console.log('el valor de d :' + valor);
+    console.log('el valor de d : ' + valor);
+
+    // DE AQUI SE SACAN TODOS LOS DATOS DE LAS COMPUTADORAS RECOMENDADAS, PERO
+    // ESPECIFICAMENTE SOLAMENTE LA MARCA Y EL MODELO
+    // tslint:disable-next-line: prefer-for-of
+    for (let index = 0; index < this.comp.length; index++) {
+      //  aqui se hara la busqueda de coincidencia exacta
+      if (valor === this.comp[index].marca + ' ' + this.comp[index].modelo) {
+        this.buscador[0] = true;
+        this.buscador[1] = index;
+        this.mar = this.comp[index].marca;
+        this.mod = this.comp[index].modelo;
+      }
+    }
+
+    if (this.buscador[0] === true) {
+      console.log('BUSCADOR ES: ' + this.buscador[1]);
+
+    }
+
+
+  }
+
+  especificaComputer() {
   }
 }
