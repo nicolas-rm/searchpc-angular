@@ -37,10 +37,12 @@
         <div class="col-12 col-sm-12 col-md-12 col-lg-12">
             <!-- <div class="form-group"> -->
             <mat-form-field style="display: block;">
-                <input id="identificador" type="text" placeholder="Filtered autocomplete" aria-label="Number" matInput [formControl]="myControlAuto" [matAutocomplete]="auto" (keyup.enter)="especificaComputer()">
+                <!-- <input id="identificador" type="text" placeholder="Filtered autocomplete" aria-label="Number" matInput [formControl]="myControlAuto" [matAutocomplete]="auto" (keyup.enter)="especificaComputer()"> -->
+                <input id="identificador" type="text" placeholder="Filtered autocomplete" aria-label="Number" matInput [formControl]="myControlAuto" [matAutocomplete]="auto">
                 <!-- <input type="text" class="form-control" name="filterPost" placeholder="Search..."> -->
                 <mat-autocomplete #auto="matAutocomplete" autoActiveFirstOption>
                     <mat-option *ngFor="let option of filteredOptions | async" [value]="option" (click)="click(option)" type="button" data-toggle="modal" data-target="#especificPc">
+                        <!-- <mat-option *ngFor="let option of filteredOptions | async" [value]="option" (click)="click(option)" type="button"> -->
                         {{option}}
                     </mat-option>
                     <!--
@@ -49,22 +51,6 @@
             </mat-form-field>
             <!-- </div> -->
         </div>
-        <!-- <p> Marca: {{ filterPC }} <strong>:v</strong> </p> -->
-        <!-- <script>
-          var input = document.getElementById("identificador");
-          if(input) {
-            console.log('SI ENTRO EN IF 1')
-            el.addEventListener('click', document.getElementById('especificPc').click(), false);
-            input.addEventListener("keyup", function(event) {
-              console.log('SI ENTRO KEYUPP')
-              if (event.keyCode === 13) {
-                console.log('SI ENTRO EN IF 2')
-              //  event.preventDefault();
-               document.getElementById("#especificPc").click();
-              }
-            });
-          }
-          </script> -->
     </div>
 
     <br>
@@ -340,7 +326,7 @@
                         </div>
                     </div>
                     <!-- CODIGO PARA COMPROBAR QUE SI FUNCIONA LO QUE SE ESCRIBE -->
-                    <p> Marca: {{ areaText }} <strong>:v</strong> </p>
+                    <!-- <p> Marca: {{ areaText }} <strong>:v</strong> </p> -->
                     <!-- CODIGO PARA COMPROBAR QUE SI FUNCIONA LO QUE SE ESCRIBE -->
 
 
@@ -432,16 +418,19 @@
     <div class="modal-dialog modal-dialog-scrollable" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="especificPCTitile">Encuesta</h5>
+                <h5 class="modal-title" id="especificPCTitile">Especificaciones</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">×</span>
               </button>
             </div>
-            CODIGO DE LA PC ESPECIFICA
+            <!-- CODIGO DE LA PC ESPECIFICA -->
             <div class="modal-body">
-                <h5 class="left"> Marca: {{ mar }}</h5>
+                <h5 class="left"> MARCA: {{ computador.marca }}</h5>
 
-                <h5 class="left"> Modelo: {{ mod }}</h5>
+                <h5 class="left"> MODELO: {{ computador.modelo }}</h5>
+                <h5 class="left"> PRECIO: {{ computador.precio }}</h5>
+                <h5 class="left"> COLOR: {{ computador.color }}</h5>
+                <h5 class="left"> ALMACENAMIENTO: {{ computador.almacenamiento }}</h5>
                 <!-- <h5 class="left"> <strong>Almacenamiento <br>({{computador.tipoAlmacenamineto}}):</strong> {{ computador.almacenamiento }}</h5>
                 <h5 class="left"> Ram: {{ computador.ram }}</h5>
                 <h5 class="left"> Velocidad CPU: {{ computador.velocidadCpu }}</h5>
