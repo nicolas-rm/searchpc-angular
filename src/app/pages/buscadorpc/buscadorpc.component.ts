@@ -116,6 +116,7 @@ export class BuscadorpcComponent implements OnInit {
     console.log('ESTE ES EL VALOR DE VALUE : ' + value);
     this.input = value;
     console.log('VALOR DE INPUT ' + this.input);
+    console.log('COLORES : '+this.preferencias.color);
     // tslint:disable-next-line: prefer-const
     let ret = this.options.filter(option =>
       option.toLowerCase().includes(filterValue)
@@ -275,7 +276,7 @@ export class BuscadorpcComponent implements OnInit {
     for (let index = 0; index < this.comp.length; index++) {
       //  aqui se hara la busqueda de coincidencia exacta
       if (this.input === this.comp[index].marca + ' ' + this.comp[index].modelo) {
-        
+
       }
     }
 

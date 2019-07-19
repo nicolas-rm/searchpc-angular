@@ -60,7 +60,10 @@
             <mdb-card>
                 <!--Card image-->
 
-                <mdb-card-img class="sizeCard" [src]="computadora.img" alt="Card image cap"></mdb-card-img>
+                <mdb-card-img style="height: 120px; width: 190px; " class="mx-auto" [src]="computadora.img" alt="Card image cap">
+                    <!-- <mdb-card-img style="height: 180px; width: 200px" class="rem-dimensions" [src]="computadora.img" alt="Card image cap"> -->
+                    <!-- <img [src]="computadora.img" class="rem-dimensions"> -->
+                </mdb-card-img>
 
                 <mdb-card-body>
 
@@ -291,13 +294,14 @@
                 <br>
 
                 <h2 class="text-center">Color que le gustaria</h2>
+                <input type="text" name="color" [(ngModel)]="preferencias.color" class="form-control mb-4" placeholder="color">
 
                 <div class="centrar">
                     <!-- <input type="text" required type="text" name="Color" class="form-control mb-4" placeholder="Color" [(ngModel)]="colores" /> -->
                     <!-- <input required type="text" name="Color" class="form-control mb-4" placeholder="Color" (change)="cadenaColor(preferencias.color)" /> -->
                     <!-- <input required type="number" required name="Presupuesto" [(ngModel)]="preferencias.presupuesto" class="form-control mb-4" placeholder="Presupuesto" /> -->
                     <!-- <input type="text" > -->
-                    <!-- <p> Marca: {{ preferencias.color }} <strong>:v</strong> </p> -->
+                    <p> Marca: {{ preferencias.color }} <strong>:v</strong> </p>
 
                     <!-- <input type="text" name="color" [(ngModel)]="computadora.color" class="form-control mb-4" placeholder="color"> -->
                     <!-- <p> Marca: {{ colores }} <strong>:v</strong> </p>  -->
@@ -315,16 +319,15 @@
                 <br>
 
                 <div class="container">
-                    <div class="media mt-3 shadow-textarea">
-                        <!-- <img class="d-flex rounded-circle avatar z-depth-1-half mr-3" src="https://mdbootstrap.com/img/Photos/Avatars/avatar-8.jpg" alt="Generic placeholder image"> -->
+                    <!-- CODIGO DEL AREA DE TEXTO -->
+                    <!-- <div class="media mt-3 shadow-textarea">
                         <div class="media-body">
-                            <!-- <h5 class="mt-0 font-weight-bold blue-text">Danny Tatuum</h5> -->
                             <div class="form-group basic-textarea rounded-corners">
                                 <textarea [(ngModel)]="areaText" class="form-control z-depth-1" id="exampleFormControlTextarea345" rows="6" placeholder="Descripcion De Tu Equipo Perpecto">
                                 </textarea>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- CODIGO PARA COMPROBAR QUE SI FUNCIONA LO QUE SE ESCRIBE -->
                     <!-- <p> Marca: {{ areaText }} <strong>:v</strong> </p> -->
                     <!-- CODIGO PARA COMPROBAR QUE SI FUNCIONA LO QUE SE ESCRIBE -->
