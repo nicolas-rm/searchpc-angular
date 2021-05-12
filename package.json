@@ -23,7 +23,7 @@
     "@angular/router": "^7.2.15",
     "angular-bootstrap-md": "^7.5.4",
     "bootstrap-select": "^1.13.10",
-    "chart.js": "^2.8.0",
+    "chart.js": "^2.9.4",
     "code-prettify": "^0.1.0",
     "core-js": "^2.5.4",
     "font-awesome": "^4.7.0",
